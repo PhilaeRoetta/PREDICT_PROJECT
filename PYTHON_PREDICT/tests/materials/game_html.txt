@@ -1,0 +1,2390 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+    <script type="text/javascript">
+        !function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+        src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+        // name: "appInsights", // Global SDK Instance name defaults to "appInsights" when not supplied
+        // ld: 0, // Defines the load delay (in ms) before attempting to load the sdk. -1 = block page load and add to head. (default) = 0ms load after timeout,
+        // useXhr: 1, // Use XHR instead of fetch to report failures (if available),
+        crossOrigin: "anonymous", // When supplied this will add the provided value as the cross origin attribute on the script tag
+        // onInit: null, // Once the application insights instance has loaded and initialized this callback function will be called with 1 argument -- the sdk instance (DO NOT ADD anything to the sdk.queue -- As they won't get called)
+        cfg: { // Application Insights Configuration
+            instrumentationKey: "4bc0e4be-d751-4b2e-8ab4-c6ed260582d1",
+            name:               "ELITE PROD"
+        }});
+    </script>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v17.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Game Center - Betclic ELITE</title>
+	<link rel="canonical" href="https://www.lnb.fr/elite/game-center-resume/" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Game Center - Betclic ELITE" />
+	<meta property="og:url" content="https://www.lnb.fr/elite/game-center-resume/" />
+	<meta property="og:site_name" content="Betclic ELITE" />
+	<meta property="article:publisher" content="https://fr-fr.facebook.com/LNBOfficiel/" />
+	<meta property="article:modified_time" content="2021-08-31T13:00:32+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@LNBofficiel" />
+	<meta name="twitter:label1" content="Durée de lecture est." />
+	<meta name="twitter:data1" content="1 minute" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.lnb.fr/elite/#organization","name":"ligue nationale de basket","url":"https://www.lnb.fr/elite/","sameAs":["https://fr-fr.facebook.com/LNBOfficiel/","https://www.instagram.com/lnb_officiel/","https://www.linkedin.cn/company/ligue-nationale-de-basket","https://www.youtube.com/c/lnbofficiel","https://fr.wikipedia.org/wiki/Ligue_nationale_de_basket-ball_(France)","https://twitter.com/LNBofficiel"],"logo":{"@type":"ImageObject","@id":"https://www.lnb.fr/elite/#logo","inLanguage":"fr-FR","url":"https://www.lnb.fr/elite/wp-content/uploads/2021/07/favicon.ico","contentUrl":"https://www.lnb.fr/elite/wp-content/uploads/2021/07/favicon.ico","width":16,"height":16,"caption":"ligue nationale de basket"},"image":{"@id":"https://www.lnb.fr/elite/#logo"}},{"@type":"WebSite","@id":"https://www.lnb.fr/elite/#website","url":"https://www.lnb.fr/elite/","name":"LNB","description":"","publisher":{"@id":"https://www.lnb.fr/elite/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.lnb.fr/elite/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"fr-FR"},{"@type":"WebPage","@id":"https://www.lnb.fr/elite/game-center-resume/#webpage","url":"https://www.lnb.fr/elite/game-center-resume/","name":"Game Center - Betclic ELITE","isPartOf":{"@id":"https://www.lnb.fr/elite/#website"},"datePublished":"2021-02-23T09:21:27+00:00","dateModified":"2021-08-31T13:00:32+00:00","breadcrumb":{"@id":"https://www.lnb.fr/elite/game-center-resume/#breadcrumb"},"inLanguage":"fr-FR","potentialAction":[{"@type":"ReadAction","target":["https://www.lnb.fr/elite/game-center-resume/"]}]},{"@type":"BreadcrumbList","@id":"https://www.lnb.fr/elite/game-center-resume/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.lnb.fr/elite/"},{"@type":"ListItem","position":2,"name":"Game Center"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//avplayer-cdn.sportradar.com' />
+<link rel='dns-prefetch' href='//static.ott.spect8.com' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.lnb.fr/elite/wp-includes/css/dist/block-library/style.min.css?ver=47544390629' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='lnb_tv_plugin_sport_radar_officiel_style-css' href='https://avplayer-cdn.sportradar.com/dist/latest/styles.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/bootstrap/css/bootstrap.min.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='font-css' href='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/css/font.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css' href='https://www.lnb.fr/elite/wp-content/themes/lnb/style.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='slider-css' href='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/css/elements/slider.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='section-games-css' href='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/css/home_page/section-games.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='livelike-css' href='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/css/elements/livelike.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='card-game-css' href='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/css/elements/card-game.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='game-resume-page-css' href='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/css/pages/game-resume-page.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='general-css' href='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/css/general.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='color-css' href='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/css/site-color-elite.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='sib-front-css-css' href='https://www.lnb.fr/elite/wp-content/plugins/mailin/css/mailin-front.css?ver=47544390629' type='text/css' media='all' />
+<link rel='stylesheet' id='cmplz-cookie-css' href='https://www.lnb.fr/elite/wp-content/plugins/complianz-gdpr/assets/css/cookieconsent.min.css?ver=47544390629' type='text/css' media='all' />
+<script type='text/javascript' id='monsterinsights-frontend-script-js-extra'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/www.lnb.fr\/elite","hash_tracking":"false","ua":"","v4_id":"G-NSYVP7X2DH"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=47544390629' id='monsterinsights-frontend-script-js'></script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-includes/js/jquery/jquery.min.js?ver=47544390629' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-includes/js/jquery/jquery-migrate.min.js?ver=47544390629' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='sib-front-js-js-extra'>
+/* <![CDATA[ */
+var sibErrMsg = {"invalidMail":"Veuillez entrer une adresse e-mail valide.","requiredField":"Veuillez compl\u00e9ter les champs obligatoires.","invalidDateFormat":"Veuillez entrer une date valide.","invalidSMSFormat":"Please fill out valid phone number"};
+var ajax_sib_front_object = {"ajax_url":"https:\/\/www.lnb.fr\/elite\/wp-admin\/admin-ajax.php","ajax_nonce":"764101df4c","flag_url":"https:\/\/www.lnb.fr\/elite\/wp-content\/plugins\/mailin\/img\/flags\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-content/plugins/mailin/js/mailin-front.js?ver=47544390629' id='sib-front-js-js'></script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+var google_tag_params = {"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"Quentin Diebold"};
+	var dataLayer_content = {"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"Quentin Diebold","google_tag_params":window.google_tag_params};
+	dataLayer.push( dataLayer_content );//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WV6N2D2');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->	<style>
+		.cmplz-blocked-content-container.recaptcha-invisible,
+		.cmplz-blocked-content-container.g-recaptcha {
+			max-width: initial !important;
+			height: 80px !important;
+			margin-bottom: 20px;
+		}
+
+		@media only screen and (max-width: 400px) {
+			.cmplz-blocked-content-container.recaptcha-invisible,
+			.cmplz-blocked-content-container.g-recaptcha {
+				height: 100px !important
+			}
+		}
+
+		.cmplz-blocked-content-container.recaptcha-invisible .cmplz-blocked-content-notice,
+		.cmplz-blocked-content-container.g-recaptcha .cmplz-blocked-content-notice {
+			max-width: initial;
+			padding: 7px;
+		}
+	</style>
+	<link rel="icon" href="https://lnb.azureedge.net/wp-content/2024/02/Icone-site-LNB-nouveau-logo-100x100px-1.jpg" sizes="32x32" />
+<link rel="icon" href="https://lnb.azureedge.net/wp-content/2024/02/Icone-site-LNB-nouveau-logo-100x100px-1.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://lnb.azureedge.net/wp-content/2024/02/Icone-site-LNB-nouveau-logo-100x100px-1.jpg" />
+<meta name="msapplication-TileImage" content="https://lnb.azureedge.net/wp-content/2024/02/Icone-site-LNB-nouveau-logo-100x100px-1.jpg" />
+</head>
+<body data-cmplz=1 class="page-template-default page page-id-113 main-background-color">
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV6N2D2"
+height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google Tag Manager (noscript) -->
+<div id="mobile-menu" class="second-background-color">
+
+    
+    <div class="row align-items-center w-100 m-0">
+        <img width="41" height="56" src="https://www.lnb.fr/elite/wp-content/uploads/2021/07/betclicelite-1.png" class="img-fluid logo-league" alt="" decoding="async" /> 
+        <div class="slider navigation" slider-overflow-effect="false" slider-block-scroll="false" hide-small-slider="false">
+
+    <div class="slider-container">
+                    
+        <div class="slides">
+
+            
+                                    <div class="lnb-slide">
+                        <div class="slide-content">
+                            <a href="https://www.lnb.fr/pro-b/"> <img width="126" height="66" src="https://lnb.azureedge.net/wp-content/2024/02/Logo_PROB.png" class="attachment-original size-original" alt="" decoding="async" /> </a>
+                        </div>
+                    </div>
+                
+                                    <div class="lnb-slide">
+                        <div class="slide-content">
+                            <a href="https://www.lnb.fr/espoirs-elite/"> <img width="126" height="66" src="https://lnb.azureedge.net/wp-content/2024/02/Logo_EspoirsELITE.png" class="attachment-original size-original" alt="" decoding="async" /> </a>
+                        </div>
+                    </div>
+                
+                                    <div class="lnb-slide">
+                        <div class="slide-content">
+                        <a href="https://www.lnb.fr/espoirs-pro-b/"> <img width="126" height="31" src="https://lnb.azureedge.net/wp-content/2024/02/PROBEspoirs71.png" class="attachment-original size-original" alt="" decoding="async" /> </a>
+                        </div>
+                    </div>
+                
+                
+        </div> 
+                            
+    </div>
+
+    <div class="slide-controls">
+        <button class="next-btn-slide">
+            <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+<g>
+	<path d="M37.6,45c-1.4-1.4-1.4-3.6,0-5s3.6-1.4,5,0l19.7,19.7c1.6,1.6,1.6,4.1,0,5.7L42.6,85c-1.4,1.4-3.6,1.4-5,0
+		c-1.4-1.4-1.4-3.6,0-5l17.5-17.5L37.6,45z"/>
+</g>
+</svg>
+        </button>
+    </div>
+                
+</div>        <div class="close-icon">
+            <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+<g>
+	<path d="M37.6,45c-1.4-1.4-1.4-3.6,0-5s3.6-1.4,5,0l19.7,19.7c1.6,1.6,1.6,4.1,0,5.7L42.6,85c-1.4,1.4-3.6,1.4-5,0
+		c-1.4-1.4-1.4-3.6,0-5l17.5-17.5L37.6,45z"/>
+</g>
+</svg>
+        </div>
+    </div>
+   
+    <div class="mobile-main-menu">
+
+        <div class="logo-home "> <a href="https://www.lnb.fr/elite/"> <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+<g>
+	<path d="M56,29.8c-3.4-3.1-8.6-3.1-12,0L10.4,59.7c-1.2,1.1-1.4,3-0.2,4.2c1.1,1.2,3,1.4,4.2,0.2l6-5.3v31.6c0,3.9,3.1,7,7,7H42
+		c1.7,0,3-1.3,3-3v-19c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v19c0,1.7,1.3,3,3,3h14.6c3.9,0,7-3.1,7-7V58.8l6,5.3
+		c1.2,1.1,3.1,1,4.2-0.2s1-3.1-0.2-4.2L56,29.8z M73.6,90.5c0,0.6-0.4,1-1,1H61v-16c0-3.9-3.1-7-7-7h-8c-3.9,0-7,3.1-7,7v16H27.4
+		c-0.6,0-1-0.4-1-1v-37L48,34.3c1.1-1,2.9-1,4,0l21.6,19.2V90.5z"/>
+</g>
+</svg>
+ </a> </div>
+        
+        <div class="menu-main-menu-container"><ul id="menu-main-menu" class="main-menu second-background-color"><li id="menu-item-13368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13368"><a href="https://www.lnb.fr/elite/playoffs-betclic-elite-2024-2025/">Playoffs</a></li>
+<li id="menu-item-13737" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13737"><a href="https://supercoupe.billetterie-club.fr/home">Supercoupe</a></li>
+<li id="menu-item-579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-579"><a href="https://www.lnb.fr/elite/calendrier/">Calendrier</a></li>
+<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122 current-menu-item"><a href="https://www.lnb.fr/elite/game-center/">Game Center</a></li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="https://www.lnb.fr/elite/classement/">Classement</a></li>
+<li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="https://www.lnb.fr/elite/stats-center/">Stats Center</a></li>
+<li id="menu-item-627" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-627"><a href="https://www.lnb.fr/elite/equipes/">Equipes</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom sub-menu">
+            <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/divers/dots.png" class="img-fluid sub-menu-link"/></li></ul></div>
+    </div>
+
+    <div class="mobile-sub-main-menu">
+            
+        <div class="close-sub-menu"> 
+            <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+<g>
+	<path d="M37.6,45c-1.4-1.4-1.4-3.6,0-5s3.6-1.4,5,0l19.7,19.7c1.6,1.6,1.6,4.1,0,5.7L42.6,85c-1.4,1.4-3.6,1.4-5,0
+		c-1.4-1.4-1.4-3.6,0-5l17.5-17.5L37.6,45z"/>
+</g>
+</svg>
+ 
+            <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/divers/dots.png" class="img-fluid"/> 
+        </div>
+
+        <div class="menu-sub-main-menu-container"><ul id="menu-sub-main-menu" class="sub-main-menu second-background-color"><li id="menu-item-13738" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13738"><a href="https://www.lnb.fr/legendes/">LNB Légendes</a></li>
+<li id="menu-item-7846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7846"><a href="https://www.lnb.fr/elite/medias/">Médias</a></li>
+<li id="menu-item-731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731"><a href="https://www.lnb.fr/elite/documents-lnb/engagements-lnb/">Engagements</a></li>
+<li id="menu-item-444" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-444"><a href="https://www.lnb.fr/elite/documents-lnb/">Documents</a></li>
+<li id="menu-item-729" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-729"><a href="https://www.lnb.fr/elite/documents-lnb/status-et-reglements-lnb/">Statuts et règlements</a></li>
+</ul></div>
+    </div>
+
+    <span class="language-selector"> <a class="lang" href="/">FR</a>  | <a class="lang" href="/?lang=en">EN</a> </span>
+
+</div>
+
+<header>
+    
+    <div id="wrapper">
+
+        <div id="masthead" class="header-main ">
+
+    <!-- Logo -->
+    <div class="logo">
+        <div class="sites-logo">
+    <img width="41" height="56" src="https://www.lnb.fr/elite/wp-content/uploads/2021/07/betclicelite-1.png" class="img-fluid logo-league left" alt="" decoding="async" />    <div class="slider navigation" slider-overflow-effect="false" slider-block-scroll="false" hide-small-slider="false">
+
+    <div class="slider-container">
+                    
+        <div class="slides">
+
+            
+                                    <div class="lnb-slide">
+                        <div class="slide-content">
+                            <a href="https://www.lnb.fr/pro-b/"> <img width="126" height="66" src="https://lnb.azureedge.net/wp-content/2024/02/Logo_PROB.png" class="attachment-original size-original" alt="" decoding="async" /> </a>
+                        </div>
+                    </div>
+                
+                                    <div class="lnb-slide">
+                        <div class="slide-content">
+                            <a href="https://www.lnb.fr/espoirs-elite/"> <img width="126" height="66" src="https://lnb.azureedge.net/wp-content/2024/02/Logo_EspoirsELITE.png" class="attachment-original size-original" alt="" decoding="async" /> </a>
+                        </div>
+                    </div>
+                
+                                    <div class="lnb-slide">
+                        <div class="slide-content">
+                        <a href="https://www.lnb.fr/espoirs-pro-b/"> <img width="126" height="31" src="https://lnb.azureedge.net/wp-content/2024/02/PROBEspoirs71.png" class="attachment-original size-original" alt="" decoding="async" /> </a>
+                        </div>
+                    </div>
+                
+                
+        </div> 
+                            
+    </div>
+
+    <div class="slide-controls">
+        <button class="next-btn-slide">
+            <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+<g>
+	<path d="M37.6,45c-1.4-1.4-1.4-3.6,0-5s3.6-1.4,5,0l19.7,19.7c1.6,1.6,1.6,4.1,0,5.7L42.6,85c-1.4,1.4-3.6,1.4-5,0
+		c-1.4-1.4-1.4-3.6,0-5l17.5-17.5L37.6,45z"/>
+</g>
+</svg>
+        </button>
+    </div>
+                
+</div></div>
+    </div>
+
+    <!-- Left Elements -->
+    <div class="left-element">
+        
+<div class="logo-home "> <a href="https://www.lnb.fr/elite/"> <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+<g>
+	<path d="M56,29.8c-3.4-3.1-8.6-3.1-12,0L10.4,59.7c-1.2,1.1-1.4,3-0.2,4.2c1.1,1.2,3,1.4,4.2,0.2l6-5.3v31.6c0,3.9,3.1,7,7,7H42
+		c1.7,0,3-1.3,3-3v-19c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v19c0,1.7,1.3,3,3,3h14.6c3.9,0,7-3.1,7-7V58.8l6,5.3
+		c1.2,1.1,3.1,1,4.2-0.2s1-3.1-0.2-4.2L56,29.8z M73.6,90.5c0,0.6-0.4,1-1,1H61v-16c0-3.9-3.1-7-7-7h-8c-3.9,0-7,3.1-7,7v16H27.4
+		c-0.6,0-1-0.4-1-1v-37L48,34.3c1.1-1,2.9-1,4,0l21.6,19.2V90.5z"/>
+</g>
+</svg>
+ </a> </div>
+
+<div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="main-menu row-list"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13368"><a href="https://www.lnb.fr/elite/playoffs-betclic-elite-2024-2025/">Playoffs</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13737"><a href="https://supercoupe.billetterie-club.fr/home">Supercoupe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-579"><a href="https://www.lnb.fr/elite/calendrier/">Calendrier</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122 current-menu-item"><a href="https://www.lnb.fr/elite/game-center/">Game Center</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="https://www.lnb.fr/elite/classement/">Classement</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="https://www.lnb.fr/elite/stats-center/">Stats Center</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-627"><a href="https://www.lnb.fr/elite/equipes/">Equipes</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"> 
+            <button id="sub-menu-link-header" class="sub-menu-link"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 36 45" style="enable-background:new 0 0 36 45;" xml:space="preserve">
+<g>
+	<circle cx="27.5" cy="22.5" r="3.9"/>
+	<circle cx="18" cy="22.5" r="3.9"/>
+	<circle cx="8.5" cy="22.5" r="3.9"/>
+</g>
+</svg>
+</button> 
+            </li></ul></div>    </div>
+
+    <!-- Right Elements -->
+    <div class="right-element">
+        <ul class="row-list d-flex align-items-center">
+
+    <li> <a href="https://www.lnb.tv/fr-int/page/home">LNB TV</a>  </li>
+
+            <li> <a id="loginLink" href="https://www.lnb.fr/elite/wp-lnb/"><button class="custom-btn user-logo"> <?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+<g xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148    C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962    c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216    h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40    c59.551,0,108,48.448,108,108S315.551,256,256,256z" fill="#062041" data-original="#000000" style="" class=""/>
+	</g>
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+</g></svg>
+ Connexion </button></a> </li>
+    
+    <li class="white"> <span class="language-selector"> <a class="lang" href="https://www.lnb.fr/elite">FR</a>  | <a class="lang" href="https://www.lnb.fr/elite">EN</a> </span> </li>
+
+</ul>    </div>
+    
+    <div id="mobile-bar" >
+        <div class="left">
+           
+            <img width="41" height="56" src="https://www.lnb.fr/elite/wp-content/uploads/2021/07/betclicelite-1.png" class="img-fluid logo-league" alt="" decoding="async" /> 
+                
+            <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/divers/burger.png" class="img-fluid mobile-icon"/>        </div>
+
+        <div class="logo-card user-logo">
+                            <a id="loginLink" href="https://www.lnb.fr/elite/wp-lnb/"> <?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+<g xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148    C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962    c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216    h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40    c59.551,0,108,48.448,108,108S315.551,256,256,256z" fill="#062041" data-original="#000000" style="" class=""/>
+	</g>
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+</g></svg>
+ </a>
+                    </div>
+    </div>
+
+</div><div id="bothead">
+    <div id="sub-menu-header">
+            <div class="menu-sub-main-menu-container"><ul id="menu-sub-main-menu-1" class="sub-main-menu row-list"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13738"><a href="https://www.lnb.fr/legendes/">LNB Légendes</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7846"><a href="https://www.lnb.fr/elite/medias/">Médias</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731"><a href="https://www.lnb.fr/elite/documents-lnb/engagements-lnb/">Engagements</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-444"><a href="https://www.lnb.fr/elite/documents-lnb/">Documents</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-729"><a href="https://www.lnb.fr/elite/documents-lnb/status-et-reglements-lnb/">Statuts et règlements</a></li>
+</ul></div>    </div>
+</div>    
+    
+
+    </div>
+    
+
+</header>
+
+<main>
+
+    <div class="page-container">
+
+                    
+            
+    <section id="slider-games-section">
+
+    </section>
+
+    
+    
+<div class="state-current-game second-background-color center" statut="over">
+    <img src="https://assets.altrstat.xyz/images/Basketball/Competition/294/logoWhite/sm.png">
+    <span class="championship-day"> Finale - Episode 1 </span>
+    <div class="result">
+        <a href="https://www.lnb.fr/elite/equipe?id=1716">
+            <span class="team-name hide-on-mobile"> Paris </span>
+        </a>
+        <div class="logo-team">
+            <a href="https://www.lnb.fr/elite/equipe?id=1716">
+                <img src="https://assets.altrstat.xyz/images/Basketball/Team/1716/logoWhite/sm.png" alt="Paris" class="img-fluid">
+                <div class="team-name display-on-mobile"> Paris </div>
+            </a>
+        </div>
+        <div class="score">
+            <span class="row-left" style=" "> <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+<g>
+	<path d="M37.6,45c-1.4-1.4-1.4-3.6,0-5s3.6-1.4,5,0l19.7,19.7c1.6,1.6,1.6,4.1,0,5.7L42.6,85c-1.4,1.4-3.6,1.4-5,0
+		c-1.4-1.4-1.4-3.6,0-5l17.5-17.5L37.6,45z"/>
+</g>
+</svg>
+ </span>
+            <span class="score-team">94</span><span class="versus">VS</span><span class="score-team">82</span>            <span class="row-right" style=" visibility:hidden"> <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+<g>
+	<path d="M37.6,45c-1.4-1.4-1.4-3.6,0-5s3.6-1.4,5,0l19.7,19.7c1.6,1.6,1.6,4.1,0,5.7L42.6,85c-1.4,1.4-3.6,1.4-5,0
+		c-1.4-1.4-1.4-3.6,0-5l17.5-17.5L37.6,45z"/>
+</g>
+</svg>
+ </span>
+        </div>
+        <div class="logo-team">
+            <a href="https://www.lnb.fr/elite/equipe?id=1713">
+                <img src="https://assets.altrstat.xyz/images/Basketball/Team/1713/logoWhite/sm.png" alt="Monaco" class="img-fluid">
+                <div class="team-name display-on-mobile"> Monaco </div>
+            </a>
+        </div>
+        <a href="https://www.lnb.fr/elite/equipe?id=1713">
+            <span class="team-name hide-on-mobile">Monaco</span>
+        </a>
+    </div>
+    <span class="date">
+    15 juin 2025    </span>
+    <span class="location"> Adidas Arena </span>
+</div>
+
+    <div id="game-information" game_id="28846">
+
+                    <div class="menu center">
+                                    <span id="resume-menu" class="me-4"> Résumé </span>
+                    <span id="boxscore-menu" class="active me-4"> Boxscore </span>
+                            </div>
+        
+        <div class="custom-container" statut="over">
+
+            <div id="resume-game" style="display:none;">
+    
+<div class="mvp second-background-color">
+    <div class="image" style="background-image: url('https://assets.altrstat.xyz/images/Basketball/Team/1716/logoWhite/or.png')"> 
+                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/9639/photo/or.png" class="img-fluid" alt="T.J. Shorts"> 
+            </div>
+    <div class="information-mvp">
+        <span class="title"> MVP DU MATCH </span>
+        <a href="https://www.lnb.fr/elite/joueur?id=9639">
+            <span class="first-name">T.J.</span>
+            <span class="last-name">Shorts</span>
+        </a>
+        <span class="mvp-country">MKD</span>
+        <span class="mvp-evaluation">31 d'évaluation</span>
+    </div>
+</div>
+    
+    <div id="resume-tab">
+        <table class="second-background-color" cellpadding="5">
+            <thead>
+                <th colspan="1"></th>
+                <th> Q1</th>
+                <th> Q2</th>
+                <th> Q3</th>
+                <th> Q4</th>
+                <th> PRL</th>
+                <th colspan="1"></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Paris</td>
+                    <td>22</td>
+                    <td>27</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td>-</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>Monaco</td>
+                    <td>23</td>
+                    <td>15</td>
+                    <td>23</td>
+                    <td>21</td>
+                    <td>-</td>
+                    <td>82</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bandeau">
+        <span class="logo-left">
+            <a href="https://www.lnb.fr/elite/equipe?id=1716">
+                <img src="https://assets.altrstat.xyz/images/Basketball/Team/1716/logoWhite/sm.png" alt="Paris" class="img-fluid">
+            </a>
+        </span>
+        <span class="stat-title"> Statistiques collectives </span>
+        <span class="logo-right">
+            <a href="https://www.lnb.fr/elite/equipe?id=1713">
+                <img src="https://assets.altrstat.xyz/images/Basketball/Team/1713/logoWhite/sm.png" alt="Monaco" class="img-fluid">
+            </a>
+        </span>
+    </div>
+
+    
+    <div class="collective-stat">
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team">66% (33 / 50)</span>
+                <span class="stat-category">2 points</span>
+                <span class="stat-second-team">57.5% (23 / 40)</span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:58.928571428571%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:41.071428571429%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team">20.8% (5 / 24)</span>
+                <span class="stat-category">3 points</span>
+                <span class="stat-second-team">29.2% (7 / 24)</span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:41.666666666667%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:58.333333333333%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team">86.7% (13 / 15)</span>
+                <span class="stat-category">Lancers Francs</span>
+                <span class="stat-second-team">62.5% (15 / 24)</span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:46.428571428571%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:53.571428571429%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team"> 37 </span>
+                <span class="stat-category">Rebonds</span>
+                <span class="stat-second-team"> 37 </span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:50%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:50%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team"> 19 </span>
+                <span class="stat-category">Passes Décisives</span>
+                <span class="stat-second-team"> 19 </span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:50%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:50%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team"> 12 </span>
+                <span class="stat-category">Interceptions</span>
+                <span class="stat-second-team"> 3 </span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:80%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:20%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team"> 2 </span>
+                <span class="stat-category">Contres</span>
+                <span class="stat-second-team"> 6 </span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:25%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:75%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team"> 6 </span>
+                <span class="stat-category">Tirs contrés</span>
+                <span class="stat-second-team"> 2 </span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:75%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:25%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team"> 10 </span>
+                <span class="stat-category">Balles perdues</span>
+                <span class="stat-second-team"> 13 </span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:43.478260869565%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:56.521739130435%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team"> 3 </span>
+                <span class="stat-category">Dunks</span>
+                <span class="stat-second-team"> 3 </span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:50%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:50%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team"> 23 </span>
+                <span class="stat-category">Fautes</span>
+                <span class="stat-second-team"> 20 </span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:53.488372093023%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:46.511627906977%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="stat-info">
+                <span class="stat-first-team"> 3 </span>
+                <span class="stat-category">évaluation</span>
+                <span class="stat-second-team"> 4 </span>
+            </div>
+            <div class="stat-bar">
+                <div class="first-team bar" style="width:42.857142857143%; background-color: #141414;"></div>
+                <div class="second-team bar" style="width:57.142857142857%; background-color: #FF0000;"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+            <div id="boxscore-game">
+            <div class="table-scroll">
+            <div class="table-wrap">
+                <table class="boxscore-tab">
+                    <thead class="" style="
+                        background-color: #141414;                    ">
+                        <tr>
+                            <th
+                                class="fixed-side" style="background-color: #141414;"                            >
+                                <div class="conteneur-flex">
+                                    <div class="logo-team">
+                                        <a href="https://www.lnb.fr/elite/equipe?id=1716">
+                                            <img src="https://assets.altrstat.xyz/images/Basketball/Team/1716/logoWhite/sm.png" alt="Paris" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="boxscore-team-name">
+                                        <a                                             href="https://www.lnb.fr/elite/equipe?id=1716">
+                                            Paris                                        </a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th> 5D </th>
+                            <th> MIN </th>
+                            <th class="border-right"> PTS </th>
+                            <th> 2R </th>
+                            <th> 2T </th>
+                            <th class="border-right">%</th>
+                            <th> 3R </th>
+                            <th> 3T </th>
+                            <th class="border-right">%</th>
+                            <th> LR </th>
+                            <th> LT </th>
+                            <th class="border-right">%</th>
+                            <th> RO </th>
+                            <th> RD </th>
+                            <th class="border-right"> RT </th>
+                            <th> PD </th>
+                            <th> CT </th>
+                            <th> CS </th>
+                            <th> IN </th>
+                            <th> BP </th>
+                            <th> FTE </th>
+                            <th> FPR </th>
+                            <th> ÉVAL </th>
+                            <th>+/-</th><th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">0</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=9639">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/9639/photo/sm.png" alt="T.J. Shorts" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=9639">
+                                            <div class="name">
+                                                <span class="first-name"> T.J. </span>
+                                                </br>
+                                                <span class="last-name"> Shorts </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  <div class="puce full"></div>  </td>
+                                <td>28</td>
+                                <td class="border-right">30</td>
+                                <td> 12 </td>
+                                <td> 19 </td>
+                                <td class="border-right"> 63.2 </td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>6</td>
+                                <td>6</td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td class="border-right">6</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>7</td>
+                                <td>31</td>
+                                <td>22</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">3</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=9571">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/9571/photo/sm.png" alt="Tyson Ward" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=9571">
+                                            <div class="name">
+                                                <span class="first-name"> Tyson </span>
+                                                </br>
+                                                <span class="last-name"> Ward </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  <div class="puce full"></div>  </td>
+                                <td>29</td>
+                                <td class="border-right">16</td>
+                                <td> 3 </td>
+                                <td> 5 </td>
+                                <td class="border-right"> 60.0 </td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td class="border-right">4</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>23</td>
+                                <td>20</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">13</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=3495">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/3495/photo/sm.png" alt="Kevarrius Hayes" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=3495">
+                                            <div class="name">
+                                                <span class="first-name"> Kevarrius </span>
+                                                </br>
+                                                <span class="last-name"> Hayes </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  <div class="puce full"></div>  </td>
+                                <td>25</td>
+                                <td class="border-right">8</td>
+                                <td> 4 </td>
+                                <td> 7 </td>
+                                <td class="border-right"> 57.1 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td class="border-right">7</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>13</td>
+                                <td>4</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">20</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=9588">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/9588/photo/sm.png" alt="Mikael Jantunen" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=9588">
+                                            <div class="name">
+                                                <span class="first-name"> Mikael </span>
+                                                </br>
+                                                <span class="last-name"> Jantunen </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  <div class="puce full"></div>  </td>
+                                <td>27</td>
+                                <td class="border-right">10</td>
+                                <td> 3 </td>
+                                <td> 3 </td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td class="border-right"> 20.0 </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="border-right"> 50.0 </td>
+                                <td>0</td>
+                                <td>5</td>
+                                <td class="border-right">5</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>13</td>
+                                <td>23</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">24</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=5938">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/5938/photo/sm.png" alt="Yakuba Ouattara" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=5938">
+                                            <div class="name">
+                                                <span class="first-name"> Yakuba </span>
+                                                </br>
+                                                <span class="last-name"> Ouattara </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  <div class="puce full"></div>  </td>
+                                <td>23</td>
+                                <td class="border-right">3</td>
+                                <td> 1 </td>
+                                <td> 1 </td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right">0</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>19</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">2</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=3586">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/3586/photo/sm.png" alt="Nadir Hifi" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=3586">
+                                            <div class="name">
+                                                <span class="first-name"> Nadir </span>
+                                                </br>
+                                                <span class="last-name"> Hifi </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>20</td>
+                                <td class="border-right">18</td>
+                                <td> 6 </td>
+                                <td> 8 </td>
+                                <td class="border-right"> 75.0 </td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td class="border-right"> 33.3 </td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="border-right">3</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>20</td>
+                                <td>-10</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">7</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=9582">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/9582/photo/sm.png" alt="Sebastian Herrera" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=9582">
+                                            <div class="name">
+                                                <span class="first-name"> Sebastian </span>
+                                                </br>
+                                                <span class="last-name"> Herrera </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>12</td>
+                                <td class="border-right">2</td>
+                                <td> 1 </td>
+                                <td> 1 </td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right">0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>-1</td>
+                                <td>-10</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">5</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=7329">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/7329/photo/sm.png" alt="Bandja Sy" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=7329">
+                                            <div class="name">
+                                                <span class="first-name"> Bandja </span>
+                                                </br>
+                                                <span class="last-name"> Sy </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>11</td>
+                                <td class="border-right">3</td>
+                                <td> 1 </td>
+                                <td> 1 </td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="border-right"> 50.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right">0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>-8</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">34</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=10046">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/10046/photo/sm.png" alt="Daulton Hommes" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=10046">
+                                            <div class="name">
+                                                <span class="first-name"> Daulton </span>
+                                                </br>
+                                                <span class="last-name"> Hommes </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>11</td>
+                                <td class="border-right">2</td>
+                                <td> 1 </td>
+                                <td> 2 </td>
+                                <td class="border-right"> 50.0 </td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="border-right">3</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>6</td>
+                                <td>-8</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">21</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=2264">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/2264/photo/sm.png" alt="Mathis Dossou-Yovo" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=2264">
+                                            <div class="name">
+                                                <span class="first-name"> Mathis </span>
+                                                </br>
+                                                <span class="last-name"> Dossou-Yovo </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>10</td>
+                                <td class="border-right">2</td>
+                                <td> 1 </td>
+                                <td> 3 </td>
+                                <td class="border-right"> 33.3 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="border-right">3</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>14</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">4</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=1345">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/1345/photo/sm.png" alt="Léopold Cavaliere" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=1345">
+                                            <div class="name">
+                                                <span class="first-name"> Léopold </span>
+                                                </br>
+                                                <span class="last-name"> Cavaliere </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>5</td>
+                                <td class="border-right">0</td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right">0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>-6</td><th>
+                            </tr>
+
+                            
+                        
+                        
+                        <tr class="team-row second-background-color ">
+                            <td class="team fixed-side second-background-color "><span>Équipe</span></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="border-right">-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="border-right">-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="border-right">-</td>
+                            <td>-</th>
+                            <td>- </td>
+                            <td class="border-right">-</td>
+                            <td> 4 </td>
+                            <td> 2 </td>
+                            <td class="border-right"> 6 </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td> 3 </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td> 3 </td>
+                            <td>-</td><th>
+                        </tr>
+
+                        
+                        <tr class="total-row main-background-color ">
+                            <td class="text-center total fixed-side main-background-color ">Total</td>
+                            <td></td>
+                            <td> 201 </td>
+                            <td class="border-right"> 94 </td>
+                            <td> 33 </td>
+                            <td> 50 </td>
+                            <td class="border-right"> 66.0 </td>
+                            <td> 5 </td>
+                            <td> 24 </td>
+                            <td class="border-right"> 20.8 </td>
+                            <td> 13 </th>
+                            <td> 15 </td>
+                            <td class="border-right"> 86.7 </td>
+                            <td> 11 </td>
+                            <td> 26 </td>
+                            <td class="border-right"> 37 </td>
+                            <td> 19 </td>
+                            <td> 2 </td>
+                            <td> 6 </td>
+                            <td> 12 </td>
+                            <td> 10 </td>
+                            <td> 23 </td>
+                            <td> 20 </td>
+                            <td> 116 </td>
+                            <td></td><th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+                <div class="coach"> Entraîneur principal : Tiago Splitter</div>
+        
+        <div class="table-scroll">
+            <div class="table-wrap">
+                <table class="boxscore-tab">
+                    <thead class="" style="
+                        background-color: #FF0000;                    ">
+                        <tr>
+                            <th class="fixed-side" style="background-color: #FF0000;">
+                                <div class="conteneur-flex">
+                                    <div class="logo-team">
+                                        <a href="https://www.lnb.fr/elite/equipe?id=1713">
+                                            <img src="https://assets.altrstat.xyz/images/Basketball/Team/1713/logoWhite/sm.png" alt="Monaco" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="boxscore-team-name">
+                                        <a                                             href="https://www.lnb.fr/elite/equipe?id=1713">
+                                            Monaco                                        </a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th> 5D </th>
+                            <th> MIN </th>
+                            <th class="border-right"> PTS </th>
+                            <th> 2R </th>
+                            <th> 2T </th>
+                            <th class="border-right">%</th>
+                            <th> 3R </th>
+                            <th> 3T </th>
+                            <th class="border-right">%</th>
+                            <th> LR </th>
+                            <th> LT </th>
+                            <th class="border-right">%</th>
+                            <th> RO </th>
+                            <th> RD </th>
+                            <th class="border-right"> RT </th>
+                            <th> PD </th>
+                            <th> CT </th>
+                            <th> CS </th>
+                            <th> IN </th>
+                            <th> BP </th>
+                            <th> FTE </th>
+                            <th> FPR </th>
+                            <th> ÉVAL </th>
+                            <th>+/-</th><th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">0</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=5873">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/5873/photo/sm.png" alt="Elie Okobo" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=5873">
+                                            <div class="name">
+                                                <span class="first-name"> Elie </span>
+                                                </br>
+                                                <span class="last-name"> Okobo </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  <div class="puce full"></div>  </td>
+                                <td>30</td>
+                                <td class="border-right">5</td>
+                                <td> 1 </td>
+                                <td> 3 </td>
+                                <td class="border-right"> 33.3 </td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td class="border-right"> 75.0 </td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td class="border-right">4</td>
+                                <td>9</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>11</td>
+                                <td>-11</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">4</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=8971">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/8971/photo/sm.png" alt="Jaron Blossomgame" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=8971">
+                                            <div class="name">
+                                                <span class="first-name"> Jaron </span>
+                                                </br>
+                                                <span class="last-name"> Blossomgame </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  <div class="puce full"></div>  </td>
+                                <td>23</td>
+                                <td class="border-right">7</td>
+                                <td> 0 </td>
+                                <td> 3 </td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td class="border-right"> 40.0 </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="border-right"> 50.0 </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="border-right">3</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>-15</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">9</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=10266">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/10266/photo/sm.png" alt="Georgios Papagiannis" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=10266">
+                                            <div class="name">
+                                                <span class="first-name"> Georgios </span>
+                                                </br>
+                                                <span class="last-name"> Papagiannis </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  <div class="puce full"></div>  </td>
+                                <td>13</td>
+                                <td class="border-right">2</td>
+                                <td> 1 </td>
+                                <td> 2 </td>
+                                <td class="border-right"> 50.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="border-right">2</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td>-19</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">11</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=8630">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/8630/photo/sm.png" alt="Alpha Diallo" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=8630">
+                                            <div class="name">
+                                                <span class="first-name"> Alpha </span>
+                                                </br>
+                                                <span class="last-name"> Diallo </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  <div class="puce full"></div>  </td>
+                                <td>29</td>
+                                <td class="border-right">16</td>
+                                <td> 8 </td>
+                                <td> 9 </td>
+                                <td class="border-right"> 88.9 </td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td class="border-right">5</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>14</td>
+                                <td>-3</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">32</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=7285">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/7285/photo/sm.png" alt="Matthew Strazel" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=7285">
+                                            <div class="name">
+                                                <span class="first-name"> Matthew </span>
+                                                </br>
+                                                <span class="last-name"> Strazel </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  <div class="puce full"></div>  </td>
+                                <td>27</td>
+                                <td class="border-right">10</td>
+                                <td> 2 </td>
+                                <td> 7 </td>
+                                <td class="border-right"> 28.6 </td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td class="border-right"> 66.7 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td class="border-right">1</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>7</td>
+                                <td>-5</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">8</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=8970">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/8970/photo/sm.png" alt="Jordan Loyd" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=8970">
+                                            <div class="name">
+                                                <span class="first-name"> Jordan </span>
+                                                </br>
+                                                <span class="last-name"> Loyd </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>24</td>
+                                <td class="border-right">8</td>
+                                <td> 2 </td>
+                                <td> 3 </td>
+                                <td class="border-right"> 66.7 </td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td class="border-right"> 20.0 </td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td class="border-right">3</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>-14</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">14</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=3811">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/3811/photo/sm.png" alt="Mouhammadou Jaiteh" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=3811">
+                                            <div class="name">
+                                                <span class="first-name"> Mouhammadou </span>
+                                                </br>
+                                                <span class="last-name"> Jaiteh </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>22</td>
+                                <td class="border-right">17</td>
+                                <td> 6 </td>
+                                <td> 9 </td>
+                                <td class="border-right"> 66.7 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td class="border-right"> 50.0 </td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td class="border-right">9</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>8</td>
+                                <td>19</td>
+                                <td>5</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">22</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=7388">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/7388/photo/sm.png" alt="Terry Tarpey" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=7388">
+                                            <div class="name">
+                                                <span class="first-name"> Terry </span>
+                                                </br>
+                                                <span class="last-name"> Tarpey </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>15</td>
+                                <td class="border-right">6</td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="border-right"> 50.0 </td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td class="border-right"> 75.0 </td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td class="border-right">2</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>7</td>
+                                <td>-4</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">33</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=10006">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/10006/photo/sm.png" alt="Nick Calathes" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=10006">
+                                            <div class="name">
+                                                <span class="first-name"> Nick </span>
+                                                </br>
+                                                <span class="last-name"> Calathes </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>13</td>
+                                <td class="border-right">3</td>
+                                <td> 0 </td>
+                                <td> 1 </td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td class="border-right"> 33.3 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td class="border-right">1</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td>-2</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">12</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=1677">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/1677/photo/sm.png" alt="Petr Cornelie" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=1677">
+                                            <div class="name">
+                                                <span class="first-name"> Petr </span>
+                                                </br>
+                                                <span class="last-name"> Cornelie </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>4</td>
+                                <td class="border-right">6</td>
+                                <td> 2 </td>
+                                <td> 2 </td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="border-right">3</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>10</td>
+                                <td>6</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="main-background-color ">
+                                <td class="fixed-side main-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">23</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=514">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/514/photo/sm.png" alt="Juhann Begarin" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=514">
+                                            <div class="name">
+                                                <span class="first-name"> Juhann </span>
+                                                </br>
+                                                <span class="last-name"> Begarin </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>1</td>
+                                <td class="border-right">2</td>
+                                <td> 1 </td>
+                                <td> 1 </td>
+                                <td class="border-right"> 100.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right">0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>2</td><th>
+                            </tr>
+
+                            
+                        
+                            
+                            
+                            <tr class="second-background-color ">
+                                <td class="fixed-side second-background-color ">
+                                    <div class="conteneur-flex">
+                                        <div class="number">30</div>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=1104">
+                                            <div class="player_photo">
+                                                                                                    <img src="https://assets.altrstat.xyz/images/Basketball/Person/1104/photo/sm.png" alt="Vitto Brown" class="img-fluid">
+                                                                                            </div>
+                                        </a>
+                                        <a href="https://www.lnb.fr/elite/joueur?id=1104">
+                                            <div class="name">
+                                                <span class="first-name"> Vitto </span>
+                                                </br>
+                                                <span class="last-name"> Brown </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>  </td>
+                                <td>0</td>
+                                <td class="border-right">0</td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right"> 0.0 </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="border-right">0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td><th>
+                            </tr>
+
+                            
+                        
+                        
+                        <tr class="team-row main-background-color ">
+                            <td class="team fixed-side main-background-color "><span>Équipe</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td class="border-right">-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td class="border-right">-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td class="border-right">-</td>
+                                <td>-</th>
+                                <td>- </td>
+                                <td class="border-right">-</td>
+                                <td> 1 </td>
+                                <td> 3 </td>
+                                <td class="border-right"> 4 </td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td> - </td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td> 4 </td>
+                                <td>-</td><th>
+                        </tr>
+
+                        
+                        <tr class="total-row second-background-color ">
+                            <td class="text-center total fixed-side second-background-color "> Total </td>
+                            <td></td>
+                            <td> 201 </td>
+                            <td class="border-right"> 82 </td>
+                            <td> 23 </td>
+                            <td> 40 </td>
+                            <td class="border-right"> 57.5 </td>
+                            <td> 7 </td>
+                            <td> 24 </td>
+                            <td class="border-right"> 29.2 </td>
+                            <td> 15 </th>
+                            <td> 24 </td>
+                            <td class="border-right"> 62.5 </td>
+                            <td> 14 </td>
+                            <td> 23 </td>
+                            <td class="border-right"> 37 </td>
+                            <td> 19 </td>
+                            <td> 6 </td>
+                            <td> 2 </td>
+                            <td> 3 </td>
+                            <td> 13 </td>
+                            <td> 20 </td>
+                            <td> 23 </td>
+                            <td> 91 </td>
+                            <td></td><th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+                <div class="coach"> Entraîneur principal : Vassilis Spanoulis</div>
+            </div>
+
+                            <div id="timeline-game" class="m-auto mb-5">
+    <livelike-widgets programid="adaee22e-9c0a-411e-99ba-ba291d475a86" mode="interactive-timeline"></livelike-widgets>
+</div>            
+            <div class="pub-section" time="8000">
+
+                                    <a href="https://greeproducts.fr/"><img width="728" height="90" src="https://lnb.azureedge.net/wp-content/2025/05/banner_gif_728x90-682dfbff0ecd7.gif" class="image wp-image-14078  attachment-full size-full" alt="" decoding="async" style="max-width: 100%; height: auto;" fetchpriority="high" /></a><a href="https://www.garance.com/"><img width="728" height="90" src="https://lnb.azureedge.net/wp-content/2025/02/Bandeau_728x90_LNBXGarance.png" class="image wp-image-13036  attachment-full size-full" alt="" decoding="async" style="max-width: 100%; height: auto;" srcset="https://lnb.azureedge.net/wp-content/2025/02/Bandeau_728x90_LNBXGarance.png 728w, https://lnb.azureedge.net/wp-content/2025/02/Bandeau_728x90_LNBXGarance-300x37.png 300w" sizes="(max-width: 728px) 100vw, 728px" /></a><a href="https://go.onelink.me/2887093520/9219ee"><img width="728" height="90" src="https://lnb.azureedge.net/wp-content/2025/02/728x90.jpg" class="image wp-image-13147  attachment-full size-full" alt="" decoding="async" style="max-width: 100%; height: auto;" srcset="https://lnb.azureedge.net/wp-content/2025/02/728x90.jpg 728w, https://lnb.azureedge.net/wp-content/2025/02/728x90-300x37.jpg 300w" sizes="(max-width: 728px) 100vw, 728px" /></a><a href="https://programmes.sportsmanagementschool.fr/presentation-ecole/?utm_source=Ligue%20Nationale%20Basketball&#038;utm_medium=affiliates&#038;utm_campaign=SMS-DCM-FR_Ligue%20Nationale%20Basketball_Sports%20Management%20School%20X%20Ligue%20Nationale%20Basketball_afl_prs_LNB001M0001&#038;utm_content=LNB001M0001&#038;c=LNB001M0001"><img width="728" height="90" src="https://lnb.azureedge.net/wp-content/2023/10/Banniere-coupe-1.png" class="image wp-image-8456  attachment-full size-full" alt="" decoding="async" style="max-width: 100%; height: auto;" loading="lazy" srcset="https://lnb.azureedge.net/wp-content/2023/10/Banniere-coupe-1.png 728w, https://lnb.azureedge.net/wp-content/2023/10/Banniere-coupe-1-300x37.png 300w" sizes="(max-width: 728px) 100vw, 728px" /></a><a href="https://go.onelink.me/2887093520/9219ee"><img width="728" height="90" src="https://lnb.azureedge.net/wp-content/2025/02/728x90.jpg" class="image wp-image-13147  attachment-full size-full" alt="" decoding="async" style="max-width: 100%; height: auto;" loading="lazy" srcset="https://lnb.azureedge.net/wp-content/2025/02/728x90.jpg 728w, https://lnb.azureedge.net/wp-content/2025/02/728x90-300x37.jpg 300w" sizes="(max-width: 728px) 100vw, 728px" /></a>                
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+        
+    </div>
+   
+</main>
+
+<footer id="footer" class="footer-wrapper second-background-color ">
+
+    <div class="middle">
+    <span class="center"> Voir aussi  </span>
+
+<div class="separator">
+
+    <ul class="network">
+        <li>  <a href="https://twitter.com/LNBofficiel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/social_network/twitter.png" class=""/> </a> </li>
+        <li>  <a href="https://fr-fr.facebook.com/LNBOfficiel/" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/social_network/fb.png" class=""/> </a> </li>
+        <li>  <a href="https://www.youtube.com/c/LNBOfficiel" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/social_network/youtube.png" class=""/> </a> </li>
+        <li>  <a href="https://www.instagram.com/lnb_officiel/?hl=fr" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/social_network/insta.png" class=""/> </a> </li>
+        <li>  <a href="https://fr.linkedin.com/company/ligue-nationale-de-basket" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/social_network/linkedin.png" class=""/> </a> </li>
+    </ul>
+
+</div>
+
+  
+</div>
+
+<div class="bottom">
+    
+<span class="center partners">Partenaires de la LNB</span>
+
+<div class="list-image-footer lnb-partners">
+    <a href="http://www.ffbb.com/" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/partners/ffbb.png" class="img-fluid"/> </a>
+    <a href="https://www.betclic.fr/" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/partners/betclic.png" class="img-fluid"/> </a>
+    <a href="https://www.garance.com/" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/partners/garance.jpg" class="img-fluid"/> </a>
+    <a href="https://www.gedibois.fr/" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/partners/gedibois.png" class="img-fluid"/> </a>
+    <a href="https://www.rentacar.fr/" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/partners/rentcar.png" class="img-fluid"/> </a>
+    <a href="https://greeproducts.fr/" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/partners/gree.png" class="img-fluid"/> </a>
+    <a href="https://www.spalding-basketball.com/fr/" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/partners/spalding.png" class="img-fluid"/> </a>
+</div>
+
+<span class="center partners pt-3">Diffuseurs de la LNB</span>
+
+<div class="list-image-footer lnb-partners pb-2">
+    <a href="https://www.dazn.com/fr-FR/welcome" title="Site de DAZN (nouvelle fenêtre)" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/channels/dazn.png" class="img-fluid"/> </a>
+    <a href="https://www.lnb.tv/fr-int/page/home" target="_blank"> <img src= "https://www.lnb.fr/elite/wp-content/themes/lnb/assets/img/channels/lnbtv.png" class="img-fluid"/> </a>
+</div>
+
+<div class="footer-menu">
+    <ul>
+        <li> <a href="https://www.lnb.fr/elite/mentions-legales/"> Mentions légales </a> | </li>
+        <li> <a href="https://www.lnb.fr/elite/politique-de-confidentialite/"> Politique de confidentialité | </a> </li>
+        <li> <a href="https://www.lnb.fr/elite/contact/"> Contact </a> </li>
+    </ul>
+</div>
+
+<!--
+
+<span class="center partners"></span>
+
+<div class="list-image-footer technical-partners">
+
+
+</div>
+
+-->
+  
+</div>
+  
+
+</footer>
+
+<script type='text/javascript' src='https://avplayer-cdn.sportradar.com/dist/latest/avvpl-player.js?ver=47544390629' id='lnb_tv_plugin_sport_radar_officiel-js'></script>
+<script type='text/javascript' src='https://static.ott.spect8.com/overlay/wrc/spect8-overlay.js?ver=47544390629' id='lnb_tv_plugin_sport_radar_officiel_overlay-js'></script>
+<script type='text/javascript' id='lnb_tv_plugin_script_video_player_officiel-js-extra'>
+/* <![CDATA[ */
+var ajaxurl = ["https:\/\/www.lnb.fr\/elite\/wp-admin\/admin-ajax.php"];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-content/plugins/lnb-tv-plugin/assets/public/scripts/sportradar/playerSportRadar.js?ver=47544390629' id='lnb_tv_plugin_script_video_player_officiel-js'></script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/bootstrap/js/bootstrap.min.js?ver=47544390629' id='bootstrap-js'></script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/js/custom-livelike.js?ver=47544390629' id='custom-livelike-js'></script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/js/standard-slider.js?ver=47544390629' id='standard-slider-js'></script>
+<script type='text/javascript' id='global-script-js-extra'>
+/* <![CDATA[ */
+var myAjax = {"ajaxurl":"https:\/\/www.lnb.fr\/elite\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-content/themes/lnb/assets/js/global-script.js?ver=47544390629' id='global-script-js'></script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-content/plugins/complianz-gdpr/assets/js/cookieconsent.min.js?ver=47544390629' id='cmplz-cookie-js'></script>
+<script type='text/javascript' id='cmplz-cookie-config-js-extra'>
+/* <![CDATA[ */
+var complianz = {"static":"","is_multisite_root":"","set_cookies":[],"block_ajax_content":"","banner_version":"29","version":"5.4.0","a_b_testing":"","do_not_track":"","consenttype":"optin","region":"eu","geoip":"","categories":"<div class=\"cmplz-categories-wrap\"><label for=\"cmplz_functional\"><div class=\"cmplz-slider-checkbox\"><input id=\"cmplz_functional\" style=\"color:#191e23\" tabindex=\"0\" data-category=\"cmplz_functional\" class=\"cmplz-consent-checkbox cmplz-slider-checkbox cmplz_functional\" checked disabled size=\"40\" type=\"checkbox\" value=\"1\" \/><span class=\"cmplz-slider cmplz-round \" ><\/span><\/div><span class=\"cc-category\" style=\"color:#191e23\">Fonctionnel<\/span><\/label><\/div><div class=\"cmplz-categories-wrap\"><label for=\"cmplz_marketing\"><div class=\"cmplz-slider-checkbox\"><input id=\"cmplz_marketing\" style=\"color:#191e23\" tabindex=\"0\" data-category=\"cmplz_marketing\" class=\"cmplz-consent-checkbox cmplz-slider-checkbox cmplz_marketing\"   size=\"40\" type=\"checkbox\" value=\"1\" \/><span class=\"cmplz-slider cmplz-round \" ><\/span><\/div><span class=\"cc-category\" style=\"color:#191e23\">Marketing<\/span><\/label><\/div><style>\t\t\t\t\t.cmplz-slider-checkbox input:checked + .cmplz-slider {\t\t\t\t\t\tbackground-color: #21759b\t\t\t\t\t}\t\t\t\t\t.cmplz-slider-checkbox input:focus + .cmplz-slider {\t\t\t\t\t\tbox-shadow: 0 0 1px #21759b;\t\t\t\t\t}\t\t\t\t\t.cmplz-slider-checkbox .cmplz-slider:before {\t\t\t\t\t\tbackground-color: #ffffff;\t\t\t\t\t}.cmplz-slider-checkbox .cmplz-slider-na:before {\t\t\t\t\t\tcolor:#ffffff;\t\t\t\t\t}\t\t\t\t\t.cmplz-slider-checkbox .cmplz-slider {\t\t\t\t\t    background-color: #F56E28;\t\t\t\t\t}\t\t\t\t\t<\/style><style>#cc-window.cc-window .cmplz-categories-wrap .cc-check svg {stroke: #191e23}<\/style>","position":"bottom","title":"bottom-right minimal","theme":"minimal","checkbox_style":"slider","use_categories":"hidden","use_categories_optinstats":"visible","header":"","accept":"Accepter","revoke":"G\u00e9rer le consentement","dismiss":"Ignorer","dismiss_timeout":"10","use_custom_cookie_css":"","custom_css":".cc-window  \n\n \n\n \n\n \n\n \n\n\n\n#cmplz-consent-ui, #cmplz-post-consent-ui {} \n\n#cmplz-consent-ui .cmplz-consent-message {} \n\n#cmplz-consent-ui button, #cmplz-post-consent-ui button {}","readmore_optin":"Politique de cookies","readmore_impressum":"Impressum","accept_informational":"Accepter","message_optout":"Nous utilisons des cookies pour optimiser notre site web et notre service.","message_optin":"<span style=\"color: #000000\">La LNB est susceptible de d\u00e9poser des cookies sur votre navigateur pour permettre le bon fonctionnement de son site, en mesurer les performances et \u00e9tablir des statistiques et analyses li\u00e9es \u00e0 la fr\u00e9quentation et \u00e0 la navigation. En cas de refus de votre part des cookies soumis \u00e0 acceptation, les cookies ne seront pas d\u00e9pos\u00e9s sur vos terminaux. Si vous souhaitez refuser l\u2019acc\u00e8s \u00e0 nos cookies de fonctionnement par le biais de votre navigateur, votre exp\u00e9rience utilisateur pourra \u00eatre d\u00e9grad\u00e9e.<\/span>\r\n\r\n<span style=\"color: #000000\">En cliquant sur \u00ab Accepter \u00bb, vous consentez aux finalit\u00e9s ci-dessus conform\u00e9ment \u00e0 notre <a href=\"https:\/\/www.lnb.fr\/elite\/politique-de-cookies\/\">politique cookies<\/a> et \u00e0 notre <a href=\"https:\/\/www.lnb.fr\/elite\/politique-de-confidentialite\/\">politique de confidentialit\u00e9<\/a>. Vous pouvez \u00e0 tout moment modifier vos choix.<\/span>","readmore_optout":"Cookie Policy","readmore_optout_dnsmpi":"Do Not Sell My Personal Information","hide_revoke":"","disable_cookiebanner":"","banner_width":"","soft_cookiewall":"","type":"opt-in","layout":"basic","dismiss_on_scroll":"","dismiss_on_timeout":"","cookie_expiry":"365","nonce":"aebc0e6233","url":"https:\/\/www.lnb.fr\/elite\/wp-json\/complianz\/v1\/?lang=fr&locale=fr_FR","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"13","cookie_path":"\/elite\/","tcf_active":"","colorpalette_background_color":"#f9f9f9","colorpalette_background_border":"#f9f9f9","colorpalette_text_color":"#191e23","colorpalette_text_hyperlink_color":"#191e23","colorpalette_toggles_background":"#21759b","colorpalette_toggles_bullet":"#ffffff","colorpalette_toggles_inactive":"#F56E28","colorpalette_border_radius":"0px 0px 0px 0px","border_width":"1px 1px 1px 1px","colorpalette_button_accept_background":"#21759b","colorpalette_button_accept_border":"#21759b","colorpalette_button_accept_text":"#ffffff","colorpalette_button_deny_background":"#f1f1f1","colorpalette_button_deny_border":"#f1f1f1","colorpalette_button_deny_text":"#21759b","colorpalette_button_settings_background":"#f1f1f1","colorpalette_button_settings_border":"#21759b","colorpalette_button_settings_text":"#21759b","buttons_border_radius":"5px 5px 5px 5px","box_shadow":"","animation":"none","animation_fade":"","animation_slide":"","view_preferences":"Pr\u00e9f\u00e9rences","save_preferences":"Enregistrer les pr\u00e9f\u00e9rences","accept_all":"Tout accepter","readmore_url":{"eu":"https:\/\/www.lnb.fr\/elite\/politique-de-cookies\/"},"privacy_link":{"eu":""},"placeholdertext":"Cliquez pour accepter les cookies de marketing et activer ce contenu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.lnb.fr/elite/wp-content/plugins/complianz-gdpr/assets/js/complianz.min.js?ver=47544390629' id='cmplz-cookie-config-js'></script>
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.0.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=G-NSYVP7X2DH"  type="text/javascript" data-cfasync="false" class="cmplz-stats cmplz-native" async></script>
+			<script type="text/javascript" data-cfasync="false" class="cmplz-stats cmplz-native">
+				var mi_version = '8.0.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+										'ga-disable-G-NSYVP7X2DH',
+														];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						if ( document.cookie.indexOf( disableStrs[ index ] + '=true' ) > -1 ) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						document.cookie = disableStrs[ index ] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if ( mi_track_user ) {
+					function __gtagDataLayer() {
+						dataLayer.push( arguments );
+					}
+
+					function __gtagTracker( type, name, parameters ) {
+						if ( type === 'event' ) {
+															parameters.send_to = monsterinsights_frontend.v4_id;
+								var hookName = name;
+								if ( typeof parameters[ 'event_category' ] !== 'undefined' ) {
+									hookName = parameters[ 'event_category' ] + ':' + name;
+								}
+
+								if ( typeof MonsterInsightsDualTracker.trackers[ hookName ] !== 'undefined' ) {
+									MonsterInsightsDualTracker.trackers[ hookName ]( parameters );
+								} else {
+									__gtagDataLayer( 'event', name, parameters );
+								}
+							
+													} else {
+							__gtagDataLayer.apply( null, arguments );
+						}
+					}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+											} );
+										__gtagTracker( 'config', 'G-NSYVP7X2DH', {"forceSSL":"true","anonymize_ip":"true","link_attribution":"true"} );
+															window.gtag = __gtagTracker;										(
+						function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( 'pageview' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[2] ) {
+												hitObject = {
+													'eventAction': 'page_view',
+													'page_path' : arguments[2],
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof arguments[1].hitType ) {
+											hitObject = arguments[1];
+											if ( 'pageview' === hitObject.hitType ) {
+												hitObject.eventAction = 'page_view';
+											}
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var arg, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+										'page' : 'page_path',
+										'location' : 'page_location',
+										'title' : 'page_title',
+									};
+									for ( arg in args ) {
+																				if ( ! ( ! args.hasOwnProperty(arg) || ! gaMap.hasOwnProperty(arg) ) ) {
+											hit[gaMap[arg]] = args[arg];
+										} else {
+											hit[arg] = args[arg];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						}
+					)();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		
+
+
+
+    <script src="https://unpkg.com/@livelike/engagementsdk/livelike.umd.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script> <!-- For Internet Explorer compatibility -->
+    <script>LiveLike.init({ clientId: "V7CgJbTLOyYDua5Hc5lgJPNJyyklnaTNd6EIGoa" });</script>
+
+
+</body>
+</html>
+<!-- Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com -->
+"""
