@@ -142,7 +142,7 @@ def exe_main():
         snowflakeA.delete_tables_data_from_python(context_dict['sr_snowflake_account_connect'],"LANDING")
 
         # We update tables in snowflake
-        snowflakeA.update_snowflake(called_by,context_dict, config.TMPF)
+        #snowflakeA.update_snowflake(called_by,context_dict, config.TMPF)
     
         # The new added games may have change the calendar of run, we update its file    
         context_dict['str_next_run_time_utc'] = update_calendar_related_files(called_by, context_dict['sr_snowflake_account_connect'], context_dict['df_task_done'], context_dict['sr_output_need'])
