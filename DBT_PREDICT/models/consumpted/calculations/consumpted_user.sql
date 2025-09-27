@@ -58,7 +58,7 @@ user_gameday as (
         {{ref('consumpted_user_gameday')}} ug
     ON
         user.SEASON_KEY = ug.SEASON_KEY
-        and user.GAMEDAY_KEY = ug.GAMEDAY_KEY
+        /*and user.GAMEDAY_KEY = ug.GAMEDAY_KEY*/
         and user.USER_KEY = ug.USER_KEY
 ),
 -- we calculate the total points, the number of predicted gamedays and predictions, 
