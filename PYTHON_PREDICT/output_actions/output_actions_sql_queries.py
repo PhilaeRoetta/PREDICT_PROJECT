@@ -79,7 +79,7 @@ qGame_Remaining_AtDate = f'''
             TEAM_HOME_NAME,
             TEAM_AWAY_NAME,
             CASE 
-               WHEN DATE_GAME_UTC <= DATEADD(WEEK, 3,'2025-09-29') THEN 1
+               WHEN DATE_GAME_UTC <= DATEADD(WEEK, 3,%s) THEN 1
                ELSE 0
             END AS IS_CLOSE
         FROM 
