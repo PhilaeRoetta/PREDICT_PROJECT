@@ -58,9 +58,10 @@ def get_inited_remaining_games(sr_snowflake_account: pd.Series, sr_gameday_outpu
     '''
 
     defined_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
-    df_games_remaining = snowflake_execute(sr_snowflake_account,sqlQ.qGame_Remaining_AtDate,(sr_gameday_output_init['SEASON_ID'],
+    df_games_remaining = snowflake_execute(sr_snowflake_account,sqlQ.qGame_Remaining_AtDate,(defined_date,
+                                                                                 sr_gameday_output_init['SEASON_ID'],
                                                                                  sr_gameday_output_init['GAMEDAY'],
-                                                                                 defined_date,defined_date,defined_date,defined_date))
+                                                                                 defined_date,defined_date,defined_date))
     
     #we get unique gamedays from games and concatenate on one row string
     REMAINING_GAMEDAYS = " , ".join(df_games_remaining['GAMEDAY'].unique())
