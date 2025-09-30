@@ -72,21 +72,47 @@ qGame = f'''
 
 #Query to get remaining games for already started gameday at a specific date
 qGame_Remaining_AtDate = f'''
+    with game as(
+        SELECT
+            GAMEDAY,
+            GAME_MESSAGE,
+            TEAM_HOME_NAME,
+            TEAM_AWAY_NAME,
+            CASE 
+               WHEN DATE_GAME_UTC <= DATEADD(WEEK, 3,'2025-09-29') THEN 1
+               ELSE 0
+            END AS IS_CLOSE
+        FROM 
+            #DATABASE#.CONSUMPTED.VW_GAME
+        WHERE
+            SEASON_ID = %s
+            AND GAMEDAY != %s
+            AND GAMEDAY_BEGIN_DATE_UTC <= %s
+            AND GAMEDAY_END_DATE_UTC > %s
+            AND DATE_GAME_UTC > %s
+        ORDER BY 
+            GAME_MESSAGE
+    ),
+    gameday as(
+        SELECT
+            GAMEDAY,
+            MAX(IS_CLOSE) AS IS_CLOSE
+        FROM game
+        GROUP BY GAMEDAY
+    )
     SELECT
-        GAMEDAY,
-        GAME_MESSAGE,
-        TEAM_HOME_NAME,
-        TEAM_AWAY_NAME
+        game.GAMEDAY,
+        game.GAME_MESSAGE,
+        game.TEAM_HOME_NAME,
+        game.TEAM_AWAY_NAME
     FROM
-        #DATABASE#.CONSUMPTED.VW_GAME
-    WHERE
-        SEASON_ID = %s
-        AND GAMEDAY != %s
-        AND GAMEDAY_BEGIN_DATE_UTC <= %s
-        AND GAMEDAY_END_DATE_UTC > %s
-        AND DATE_GAME_UTC > %s
-        AND DATE_GAME_UTC <= DATEADD(WEEK, 3, %s)
-    ORDER BY GAME_MESSAGE;
+        game
+    JOIN 
+        gameday
+        ON gameday.GAMEDAY = game.GAMEDAY
+    WHERE 
+        gameday.IS_CLOSE 
+        OR game.IS_CLOSE;
     '''
 
 #Query to get prediction and result per game and user
