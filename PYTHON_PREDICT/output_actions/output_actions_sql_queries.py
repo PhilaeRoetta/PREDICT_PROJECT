@@ -79,7 +79,7 @@ qGame_Remaining_AtDate = f'''
             TEAM_HOME_NAME,
             TEAM_AWAY_NAME,
             CASE 
-               WHEN DATE_GAME_UTC <= DATEADD(WEEK, 3,%s) THEN 1
+               WHEN DATE_GAME_UTC <= DATEADD(WEEK, 3,TO_DATE(%s,'YYYY-MM-DD')) THEN 1
                ELSE 0
             END AS IS_CLOSE
         FROM 
@@ -87,9 +87,9 @@ qGame_Remaining_AtDate = f'''
         WHERE
             SEASON_ID = %s
             AND GAMEDAY != %s
-            AND GAMEDAY_BEGIN_DATE_UTC <= %s
-            AND GAMEDAY_END_DATE_UTC > %s
-            AND DATE_GAME_UTC > %s
+            AND GAMEDAY_BEGIN_DATE_UTC <= TO_DATE(%s,'YYYY-MM-DD')
+            AND GAMEDAY_END_DATE_UTC > TO_DATE(%s,'YYYY-MM-DD')
+            AND DATE_GAME_UTC > TO_DATE(%s,'YYYY-MM-DD')
         ORDER BY 
             GAME_MESSAGE
     ),
