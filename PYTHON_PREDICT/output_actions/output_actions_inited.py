@@ -58,22 +58,19 @@ def get_inited_remaining_games(sr_snowflake_account: pd.Series, sr_gameday_outpu
     '''
 
     defined_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
-    print("***0***",defined_date,sr_gameday_output_init)
     df_games_remaining = snowflake_execute(sr_snowflake_account,sqlQ.qGame_Remaining_AtDate,(defined_date,
                                                                                  sr_gameday_output_init['SEASON_ID'],
                                                                                  sr_gameday_output_init['GAMEDAY'],
                                                                                  defined_date,defined_date,defined_date))
-    print("***1***",df_games_remaining)
     #we get unique gamedays from games and concatenate on one row string
     REMAINING_GAMEDAYS = " , ".join(df_games_remaining['GAMEDAY'].unique())
-    print("***2***",REMAINING_GAMEDAYS)
     df_games_remaining['STRING'] = ("#" + df_games_remaining['GAME_MESSAGE'] + "# " +
                                           df_games_remaining['TEAM_HOME_NAME'] + " vs " +
                                           df_games_remaining['TEAM_AWAY_NAME'] + " ==> [i]+1[/i]")
-    print("***3***",df_games_remaining['STRING'])
+
     # we create the REMAINING_GAMES string by concatenating all games on several lines
     REMAINING_GAMES = "\n".join(df_games_remaining['STRING'])
-    print("***4***",REMAINING_GAMES)
+    
     return REMAINING_GAMEDAYS,REMAINING_GAMES,len(df_games_remaining)
 
 @config.exit_program(log_filter=lambda args: dict(args))
