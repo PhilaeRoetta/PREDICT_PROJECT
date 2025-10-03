@@ -58,6 +58,7 @@ def get_inited_remaining_games(sr_snowflake_account: pd.Series, sr_gameday_outpu
     '''
 
     defined_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+    print("***0***",defined_date,sr_gameday_output_init)
     df_games_remaining = snowflake_execute(sr_snowflake_account,sqlQ.qGame_Remaining_AtDate,(defined_date,
                                                                                  sr_gameday_output_init['SEASON_ID'],
                                                                                  sr_gameday_output_init['GAMEDAY'],
