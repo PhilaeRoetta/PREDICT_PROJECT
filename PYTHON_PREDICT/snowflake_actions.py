@@ -99,6 +99,9 @@ def snowflake_execute(sr_snowflake_account: pd.Series, query: str, params: Seque
         if query_personalized.strip().lower().startswith("select"):
             df = snowCursor.fetch_pandas_all()
             return df
+        if query_personalized.strip().lower().startswith("with"):
+            df = snowCursor.fetch_pandas_all()
+            return df
         #If it is a show query we return the associated dataframe
         elif query_personalized.strip().lower().startswith("show"):
             lst = snowCursor.fetchall()
