@@ -1,0 +1,2 @@
+#1EJ.01# M@tch! vs TEAM2 ==> [i]+1[/i]
+#&TeamB# <TeamA> vs <TeamA> ==> [i]+1[/i]
