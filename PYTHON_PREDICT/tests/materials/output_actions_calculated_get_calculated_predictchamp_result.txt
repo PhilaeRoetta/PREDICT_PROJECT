@@ -1,0 +1,7 @@
+1/ [b]TeamA[/b] vs TeamB : 240 - 0
+[code]__FOR__ TeamA:
+-> USER1: 200 pts   - [__Not counted__: USER2 (188)]
+-> __Home bonus__: 40 pts[/code]
+2/ TeamC vs [b]TeamD[/b] : 0 - 102
+[code]__FOR__ TeamD:
+-> USER3: 102 pts[/code]

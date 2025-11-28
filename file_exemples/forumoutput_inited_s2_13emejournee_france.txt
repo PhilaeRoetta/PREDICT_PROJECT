@@ -1,0 +1,29 @@
++++++
+
+Lancement [b]13ème journée[/b]:  1er match le [b]Vendredi 05/12 20h[/b]
+
+ [u]Trame - vous pouvez la copier-coller et la remplacer par vos choix[/u] :wink: 
+"[b]
+#13ÈJ.01# Team01 vs Team02 ==> [i]+1[/i]
+#13ÈJ.02# Team03 vs Team04 ==> [i]+1[/i]
+#13ÈJ.03# Team05 vs Team06 ==> [i]+1[/i]
+#13ÈJ.04# Team07 vs Team08 ==> [i]+1[/i]
+#13ÈJ.05# Team09 vs Team10 ==> [i]+1[/i]
+#13ÈJ.06# Team11 vs Team12 ==> [i]+1[/i]
+#13ÈJ.07# Team13 vs Team14 ==> [i]+1[/i]
+#13ÈJ.08# Team15 vs Team16 ==> [i]+1[/i]
+#13ÈJ.09# Team17 vs Team18 ==> [i]+1[/i]
+#13ÈJ.10# Team19 vs Team20 ==> [i]+1[/i]
+#13ÈJ.BN# Identifiant du match bonus ==> [i]13ÈJ.01[/i]
+[/b]"
+
+Pour que votre choix soit valide il doit être publié avant le début du match qu'il concerne :jerk: 
+Pour que votre choix soit lu automatiquement et ainsi gagner un léger bonus (cf « score de l’automatisation ») merci de :
+1/ [b] conserver l'identifiant associé (entre "#")[/b]
+2/ indiquer votre choix [b]après la flèche "==>" [/b]
+
+Vous pouvez choisir / changer votre équipe préférée pour le championnat de pronostics jusqu'au début de la phase retour en (ré)indiquant la ligne avec votre (nouvelle) équipe. Elle sera prise en compte pour toutes les journées jusqu'à la fin de saison. \:D/
+Voici la ligne à indiquer:
+"[b]
+#SEASON.TM# Equipe - Championnat de pronostics ==> [i]votre équipe[/i]
+[/b]"

@@ -1,0 +1,118 @@
++++++
+
+[center][size=200][b]Résultats - 12ème journée[/b][/size][/center]
+
+
+[size=150][b]Résultats ELITE2[/b][/size]
+[quote]1/ Team01 vs Team02: [b]+5[/b] [ 85 - 80 ]
+2/ Team03 vs Team04: [b]+8[/b] [ 94 - 86 ]
+3/ Team05 vs Team06: [b]+4[/b] [ 80 - 76 ]
+4/ Team07 vs Team08: [b]-12[/b] [ 81 - 93 ]
+5/ Team09 vs Team10: [b]+4[/b] [ 74 - 70 ]
+6/ Team11 vs Team12: [b]-11[/b] [ 76 - 87 ]
+7/ Team13 vs Team14: [b]+12[/b] [ 89 - 77 ]
+8/ Team15 vs Team16: [b]+19[/b] [ 82 - 63 ]
+9/ Team17 vs Team18: [b]+9[/b] [ 87 - 78 ]
+10/ Team19 vs Team20: [b]+6[/b] [ 88 - 82 ][/quote]
+
+[size=150][b]Concours individuel [/b][/size]
+
+[b][u]Résultats et classement individuel de journée [/b][/u]
+[i]-> “Score du bon vainqueur”: 15 pts sì vainqueur trouvé \:D/
+-> “Score du bon écart”: 30 pts si résultat trouvé 8) Sinon, 15 pts - l’écart entre pronostic et résultat. =P~ 
+-> “Score de l’automatisation”: 1 pt si les 2 points importants de la trame sont respectés :hiding:
+-> Le match bonus triple les scores :3some: 
+ -> Nombre de points de journée: somme des scores pour tous les matchs pronostiqués [/i]
+
+[quote]1. gamer01 - 278 pts 
+2. gamer02 - 267 pts 
+3. gamer03 - 249 pts 
+4. gamer04 - 241 pts 
+5. gamer05 - 227 pts 
+6. gamer06 - 225 pts 
+7. gamer07 - 203 pts 
+8. gamer08 - 194 pts 
+9. gamer09 - 191 pts 
+10. gamer10 - 171 pts 
+11. gamer11 - 146 pts 
+12. gamer12 - 142 pts 
+13. gamer13 - 139 pts 
+14. gamer14 - 137 pts [/quote]
+
+[b][u] Détail des scores :[/u][/b]
+[i]['PT' = "Nombre de points de journée" ; 'G..' = "Numéro du match" ; 'BO' = "Match choisi comme bonus (*3)" ; 'RE' = "Résultat du match" ; 'PR' = "Pronostic du match" ; 'SW' = "Score du bon vainqueur" ; 'SD' = "Score du bon écart" ; 'SA' = "Score de l'automatisation" ][/i]
+[img]https://i.ibb.co/AAA1A11A/table-score-details-s2-12emejournee-france.jpg[/img]
+ (Si vous ne parvenez pas à lire l’image (trop petite), cliquez ici pour l’afficher en grand: [url] https://i.ibb.co/AAA1A11A/table-score-details-s2-12emejournee-france.jpg)[/url])
+
+[b][u] Classement individuel global:[/u][/b]
+[img]https://i.ibb.co/BBB1B11B/table-global-scores-s2-12emejournee-france.jpg[/img]
+
+[b][u] Classement moyen par pronostic :[/u][/b]
+[i]-> Pour les pronostiqueurs avec au moins > 72 prono (> 50% des journées terminées ) [/i] :thumbright: 
+[i]-> Calcul: TOTAL_POINTS / NB_TOTAL_PRONO [Les matchs bonus comptent comme 3 pronostics]
+[/i][quote]1. gamer01 - 19.56 pts
+2. gamer02 - 18.81 pts
+3. gamer03 - 18.54 pts
+4. gamer04 - 18.17 pts
+5. gamer05 - 18.15 pts
+6. gamer06 - 17.86 pts
+7. gamer07 - 17.74 pts
+8. gamer08 - 17.3 pts
+9. gamer09 - 17.0 pts
+10. gamer10 - 16.95 pts
+11. gamer11 - 16.86 pts
+12. gamer12 - 16.38 pts
+13. gamer13 - 16.1 pts
+14. gamer14 - 15.25 pts[/quote]
+
+[size=150][b]Championnat de pronostics[/b][/size]
+
+[b][u]Résultats du championnat de pronostics [/u][/b]
+[i]-> Nombre de points d’une équipe: Nombre de points de journée de son meilleur pronostiqueur :headbang: 
+-> Les équipes à domicile reçoivent un bonus de 20% :director:
+-> En cas d'égalité, le vainqueur est l'équipe à domicile[/i]   
+
+[quote]1/ Team01 vs [b]Team02[/b] : 0 - 139
+[code]Pour Team02:
+-> gamer13: 139 pts[/code]
+2/ [b]Team03[/b] vs Team04 : 299 - 0
+[code]Pour Team03:
+-> gamer03: 249 pts   - [Non comptabilisés: gamer05 (227)/ gamer06 (225)]
+-> Bonus domicile: 50 pts[/code]
+3/ [b]Team05[/b] vs Team06 : 320 - 278
+[code]Pour Team06:
+-> gamer01: 278 pts[/code]
+[code]Pour Team05:
+-> gamer02: 267 pts
+-> Bonus domicile: 53 pts[/code]
+4/ [b]Team07[/b] vs Team08 : 205 - 191
+[code]Pour Team07:
+-> gamer10: 171 pts   - [Non comptabilisés: gamer14 (137)]
+-> Bonus domicile: 34 pts[/code]
+[code]Pour Team08:
+-> gamer09: 191 pts   - [Non comptabilisés: gamer12 (142)][/code]
+5/ [b]Team09[/b] vs Team10 : 0 - 0
+6/ [b]Team11[/b] vs Team12 : 175 - 0
+[code]Pour Team11:
+-> gamer11: 146 pts
+-> Bonus domicile: 29 pts[/code]
+7/ [b]Team13[/b] vs Team14 : 0 - 0
+8/ [b]Team15[/b] vs Team16 : 289 - 0
+[code]Pour Team15:
+-> gamer04: 241 pts   - [Non comptabilisés: gamer07 (203)]
+-> Bonus domicile: 48 pts[/code]
+9/ [b]Team17[/b] vs Team18 : 0 - 0
+10/ [b]Team19[/b] vs Team20 : 233 - 0
+[code]Pour Team19:
+-> gamer08: 194 pts
+-> Bonus domicile: 39 pts[/code][/quote]
+
+[b][u] Classement [/b][/u]
+[i]-> Les équipes classées entre 1 & 10 seront qualifiés pour les plays-offs/ plays-in du championnat de pronostics.[/i]
+[i]-> Les équipes classées entre 1 & 4 seront qualifiés pour la leaders cup du championnat de pronostics.[/i]
+[img]https://i.ibb.co/CCC1C11C/table-predictchamp-ranking-s2-12emejournee-france.jpg[/img]
+
+[size=150][b]Périmètre des journées terminées [/b][/size]
+
+12 journées terminées (144 pronos):
+1ère journée (12) / 3ème journée (12) / 2ème journée (12) / 4ème journée (12) / 5ème journée (12) / 6ème journée (12) / 7ème journée (12) / 8ème journée (12) / 9ème journée (12) / 10ème journée (12) / 11ème journée (12) / 12ème journée (12) 
