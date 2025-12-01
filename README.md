@@ -15,11 +15,11 @@ It runs on Linux (Ubuntu) and can be executed locally or manually/automatically 
 
 ## Current sources<a name="currentsources"></a>
 
-The software currently contains one source of leagues to predict: The French Elite Basketball.
-It currently processes message from one French forum
-The only language for message posting is French.
+The software currently contains one source of leagues to predict: The French Elite Basketball.  
+It currently processes message from one French forum.  
+The only language for message posting is French.  
 
-To add more souces, read the full manual.
+To add more souces, read the full manual.  
 
 ## Input tools and accounts<a name="inputtoolsaccounts"></a>
 
