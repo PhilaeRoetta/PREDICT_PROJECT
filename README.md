@@ -3,6 +3,7 @@ A Python-based software that manages a sport prediction game on forums.
 It runs on Linux (Ubuntu) and can be executed locally or manually/automatically through GitHub Actions.
 
 ## Table of Contents
+- [Current scope](#currentscope)
 - [Input tools and accounts](#inputtoolsaccounts)
 - [High level overview](#overview)
 - [Installation](#installation)
