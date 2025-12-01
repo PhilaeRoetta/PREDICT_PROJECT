@@ -41,7 +41,7 @@ Sources → Python → Snowflake → Python → Forums posts → DropBox (upload
 
 ```
 The workflow:
-- Fetch game schedules and results from sport seasons source
+- Fetch game schedules and results from sport leagues source
 - Read predictions from forum topics sources
 - Store and compute results in Snowflake, via DBT
 - Generate messages, images, and rankings
