@@ -1,6 +1,6 @@
 # Sport Prediction Project
 A Python-based software that manages a sport prediction game on forums.  
-It runs on Linux (Ubuntu) and can be executed locally or automatically through GitHub Actions.
+It runs on Linux (Ubuntu) and can be executed locally or manually/automatically through GitHub Actions.
 
 ## Table of Contents
 - [Input tools and accounts](#inputtoolsaccounts)
