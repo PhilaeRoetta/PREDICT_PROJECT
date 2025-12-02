@@ -151,4 +151,3 @@ To explore DBT documentation:
 ## Documentation<a name="documentation"></a>
 
 A full documentation can be found in the file manual.md
-
