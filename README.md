@@ -65,7 +65,7 @@ See the Full Manual for the complete list.
 
 The system exposes several entry points:  
 - init competition: to add new competitions to predict from potential new sources
-- init snowflake: copy of the snowflake database on a new account
+- init snowflake: copies the snowflake database on a new account
 - playoffs table: creates a playoffs bracket with prediction results for playoffs competition
 - main entry point: run automatically and manually the daily business  path with reading predictions, updating database, posting results,...
 
