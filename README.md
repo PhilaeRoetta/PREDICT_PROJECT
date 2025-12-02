@@ -63,13 +63,18 @@ See the Full Manual for the complete list.
 
 ## Usage - Entry points<a name="usage"></a>
 
-The system exposes several entry points (init competitions, post templates, calculate results,..). 
-- Typical local usage:
+The system exposes several entry points:  
+- init competition: to add new competitions to predict from potential new sources
+- init snowflake: copy of the snowflake database on a new account
+- playoffs table: creates a playoffs bracket with prediction results for playoffs competition
+- main entry point: run automatically and manually the daily business  path with reading predictions, updating database, posting results,...
+
+- Typical local manual usage of main entry point
     ```
         cd PYTHON_PREDICT
         python exe_main.py
     ```
-- Typical GitHub Actions usage through *gitrun_main_auto_prod.yml*  
+- Typical GitHub Actions usage of main entry point through *gitrun_main_auto_prod.yml*  
 
 See more on the full manual.
 
