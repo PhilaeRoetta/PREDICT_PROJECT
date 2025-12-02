@@ -58,8 +58,7 @@ The workflow:
 ## Input Parameters<a name="inputparameters"></a>
 
 Set the required parameters (Snowflake, Dropbox, imgbb, Gmail, forum credentials).
-Some of them are set on GitHub se- **imgbb account** (https://imgbb.com/), to send results pictures online, in order to post them on forums
-crets, others set before running.
+Some of them are set on GitHub secrets, others set before running.
 See the Full Manual for the complete list.
 
 ## Usage - Entry points<a name="usage"></a>
