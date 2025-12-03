@@ -131,6 +131,7 @@ PREDICT_PROJECT/
 - Full Prod/Test environment separation
 - GitHub Actions automation scheduled
 - Snowflake + DBT transformation pipeline
+- Python and DBT tests
 
 ## Snowflake database architecture<a name="snowflakearchitecture"></a>
 
