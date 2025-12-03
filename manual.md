@@ -17,6 +17,9 @@
 
 Vocabulary used in the rules and in the software
 
+- **source**: A source is external websites to which the program connects:  
+  - to get games to predict details (sport league source)
+  - to get messages prediction, and post templates and results (forums sources)
 - **season**: A season is a specific sport league during a year from a specific country (ex: The Elite league of basketball in France in 2024-2025)
 - **competition**: A competition is a part of a season where rules are consistent (ex: Regular Season, or PlayOffs)
 - **gameday**: A gameday is a set of games from a competition grouped together, where each team can play only once (ex: Gameday 3),usually designed by the sport league organization. Usually, all games of a gameday occur within the same time frame.
