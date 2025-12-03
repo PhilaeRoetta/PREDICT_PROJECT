@@ -11,6 +11,8 @@ It runs on Linux (Ubuntu) and can be executed locally or manually/automatically 
 - [GitHub project repository tree](#githubtree)
 - [Features](#feature)
 - [Snowflake database architecture](#snowflakearchitecture)
+- [Error management and impacts](#error)
+- [Tests](#tests)
 - [Documentation](#documentation)
 
 ## Current sources<a name="currentsources"></a>
