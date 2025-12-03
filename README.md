@@ -164,7 +164,7 @@ If an error occurs at any point, the software will behave differently depending 
 The failure stops the program immediately, running essential closing functions, then exit and returning the error to the software administrator.  
 The decorators handling that behaviour are developped in *config.py*
 
-There won't be impact on [the planned calendar](#calendar), neither on files [next_run_time_utc.txt](#nextruntimeutc) or [task_done.csv](#taskdone). Next GitHub automatic run, the same calendar task will be retried, as it didn't complete.
+Next GitHub automatic run, the same calendar task will be retried, as it didn't complete.
 
 This ensures that:
 - no task is skipped due to an error,  
