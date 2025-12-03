@@ -12,8 +12,6 @@
 - [Calendar management](#calendar)
 - [Usage - Entry points](#usage)
 - [Modifying output_need_manual file](#modifyingoutputneedmanual)
-- [Error management and impacts](#error)
-- [Tests](#tests)
 
 ## Vocabulary<a name="vocabulary"></a>
 
