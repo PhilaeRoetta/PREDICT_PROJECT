@@ -155,6 +155,45 @@ To explore DBT documentation:
     dbt docs serve
 ```
 
+## Error management and impacts<a name="error"></a>
+
+If an error occurs at any point, the software will behave differently depending on the origin:
+- on functions communicating with external tools (Snowflake, ImgBB, DropBox, Forums, sport leagues websites), it will retry 3 times before considering it as a failure. 
+- Otherwise it will consider as a failure directly.
+
+The failure stops the program immediately, running essential closing functions, then exit and returning the error to the software administrator.  
+The decorators handling that behaviour are developped in *config.py*
+
+There won't be impact on [the planned calendar](#calendar), neither on files [next_run_time_utc.txt](#nextruntimeutc) or [task_done.csv](#taskdone). Next GitHub automatic run, the same calendar task will be retried, as it didn't complete.
+
+This ensures that:
+- no task is skipped due to an error,  
+- no partial state is incorrectly recorded,  
+- the system remains consistent across runs.
+
+## Tests<a name="tests"></a>
+
+- Python tests
+
+    The program includes tests for each Python module: one happy paths module, and one edge cases scenarii module.   
+    Each test module uses dedicated material files in the test directory.  
+    To run them:
+    ```
+        cd PYTHON_PREDICT/tests
+        python nameofthetest.py
+    ```
+
+- DBT tests
+
+    DBT automatically runs a large number of tests during program execution.  
+    These tests are defined in the project’s `.yml` files.
+    If tests don't succeed, the program stops.   
+    To run them:
+    ```
+        cd DBT_PREDICT
+        dbt test -- select nameofthetest
+    ```
+
 ## Documentation<a name="documentation"></a>
 
 A full documentation can be found in the file manual.md
