@@ -86,7 +86,7 @@ Players compete individually based on the number of points earned.
 
 - Gameday Number of points
 
-    For each player, the gameday number of points is the sum of:
+    For each player, the gameday number of points is the sum of scores for all predicted games related to the gameday:
     - Good winner score  
     - Good score difference score  
     - Automatic score  
