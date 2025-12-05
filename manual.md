@@ -141,7 +141,7 @@ Their individual points contribute to the chosen team, for the prediction champi
 
 ### MVP election [Most Valuable Predictor]
 
-For the last gameday of each month—or the last gameday of a competition—the program posts the results along with the total points earned during that period (both individual and team-based).  
+For the last gameday of each month—or the last gameday of a competition—the program posts the results along with the total points earned during that period for each player (both individual and team-based).  
 Players vote for the MVP based on these results.
 
 ## Input tools and accounts<a name="inputtoolsaccounts"></a>
