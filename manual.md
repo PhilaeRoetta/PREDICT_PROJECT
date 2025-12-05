@@ -124,9 +124,9 @@ Their individual points contribute to the chosen team, for the prediction champi
 - Teams  points
 
     For each game:
-    - A team’s score is the **maximum** gameday individual score among all players who selected that team.
-    - The home team receives a **20% bonus**.
-    - If the game is at a neutral venue, the administrator may disable the home advantage using **HAS_HOME_ADV** in  
+    - A team’s score is the maximum gameday individual score among all players who selected that team.
+    - The home team receives a 20% bonus.
+    - If the game is at a neutral venue, the administrator may disable the home advantage using HAS_HOME_ADV in  
     [predictchamp_game_to_add.csv](#predictchampgametoadd).
 
 - Prediction championship game results:
