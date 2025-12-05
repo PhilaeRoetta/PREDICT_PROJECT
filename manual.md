@@ -146,17 +146,8 @@ An election for the MVP takes place based on these total points earned.
 
 ## Input tools and accounts<a name="inputtoolsaccounts"></a>
 
-The software relies on several external tools, services, and accounts to operate correctly:
-- **Snowflake account**, to store predictions and calculations, with at least one user having DML privileges (The software uses its credentials)
-- **DropBox account**, containing some input files for a successful run, and some program files results in a stable tree
-- **imgbb account** (https://imgbb.com/), to send results pictures online, in order to post them on forums
-- **Gmail account** to send by email the status of the run<a name="emailsent"></a> (if ran through GitHub Actions), with details of run:
-    - details from output need file, manually chosen with [the input file output_need_manual.csv](#outputneedmanual) or generated thanks to the [planned calendar of run](#calendar)
-    - the next run timestamp from [the file next_run_time_utc.txt](#nextruntimeutc)
-    - if applicable, the query to [check](#messageactioncheck) new messages from players  
-    An exemple of the content of a mail can be found in *file_exemples/email_from_the_program.txt*
-- **Sport season source accounts** for each season in the scope, a possible account to get games and result
-- **Forum accounts** for each forum in the scope, a possible account to read players' predictions, and post prediction template and results
+The software relies on several external tools, services, and accounts to operate correctly.  
+See *README.md* section for more details.
 
 ## Input Parameters<a name="inputparameters"></a>
 
