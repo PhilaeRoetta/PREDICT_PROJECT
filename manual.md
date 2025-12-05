@@ -116,7 +116,7 @@ Their individual points contribute to the chosen team, for the prediction champi
 
 - Games in the prediction championship
 
-    During regular season, games are assumed to be the same than the ones of the predicted league.   
+    During the competition of the regular season, games are assumed to be the same than the ones of the predicted league.   
     This is decided by the software administrator with the column IS_SAME_FOR_PREDICTCHAMP of [the input required manual file competition.csv](#competition).  
     For other competitions, depending on the ranking of the prediction championship, their schedule might be different. For exemple for playoffs, the qualified TOP8 will probably be different than the one from the predicted league.
     In this case, the software administrator have to write manual prediction championship games in [the input required manual file predictchamp_game_to_add.csv](#predictchampgametoadd)
