@@ -111,7 +111,7 @@ Players compete individually based on the number of points earned.
 
 ### Prediction championship
 
-    Players can choose or change their team amongst predicted league teams, until a deadline fixed by the software administrator with the column SEASON_TEAMCHOICE_DEADLINE of [the input required manual file season.csv](#season). Their individual points contribute to the chosen team, for the prediction championship, until the end of the season, unless changed before the deadline.
+Players can choose or change their team amongst predicted league teams, until a deadline fixed by the software administrator with the column SEASON_TEAMCHOICE_DEADLINE of [the input required manual file season.csv](#season). Their individual points contribute to the chosen team, for the prediction championship, until the end of the season, unless changed before the deadline.
 
 - Games in the prediction championship
 
