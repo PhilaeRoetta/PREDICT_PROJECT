@@ -9,9 +9,10 @@
 - [DropBox repository tree](#dropboxtree)
 - [Files required](#filesrequired)
 - [How to add competition to scope](#addtoscope)
-- [Calendar management](#calendar)
+- [Calendar management and automatic run](#calendar)
 - [Usage - Entry points](#usage)
 - [Modifying output_need_manual file](#modifyingoutputneedmanual)
+- [Automatic email sent](#emailsent)
 
 ## Vocabulary<a name="vocabulary"></a>
 
@@ -408,7 +409,7 @@ The software administrator can add to the scope any sport season they want, for 
 - To add the new competition and topics to the database, the software administrator must:
     - run [the "Init compet" entry point](#initcompet)
 
-## Calendar management<a name="calendar"></a>
+## Calendar management and automatic run <a name="calendar"></a>
 
 The software can be run manually by the software administrator, using an [output_need_manual file](#outputneedmanual) that they prealably [modified](modifyingoutputneedmanual).  
 But the software is also ran automatically, every 12 minutes, by GitHub using GitHub Actions, the file ouput_need being generated automatically. 
@@ -501,4 +502,15 @@ The program runs tasks automatically based on [the planned calendar](#calendar).
 - <a name="istodelete"></a>IS_TO_DELETE: If 1, will delete calculations on the database for the desired GAMEDAY (scores = 0)
 
 - <a name="istorecalculate"></a>IS_TO_RECALCULATE: If 1, will recalculate by deleting and calculating again the desired GAMEDAY on the database
+
+## Automatic email sent<a name="emailsent"></a>
+
+After running [an entry points](#usage) through GitHub actions, GitHub will send an email to the recipient [see Input parameters](#inputparameters), to inform them of the success or failure.
+The mail of success of the [main entry point](#mainrun) will be send with copy of:  
+- output_need file text (#outputneed) automatically or manually generated
+- next run time utc file text (#nextruntimeutc)
+- the sql query to validate players prediction, for a [CHECK run](#messageactioncheck). 
+An exemple of email sent can be found in **
+
+
 
