@@ -164,7 +164,7 @@ Moreover, considering the [current sources](#currentsources), stored as GitHub s
 - **BI_URL**, the BI forum website, BI_USERNAME and BI_PASSWORD to log to BI acccount and post results
 
 Considering the context of run:
-- <a name="isoutputauto"></a>**IS_OUTPUT_AUTO** (0/1): If 1, the output_need file will be generated during run from the [planned calendar](#calendar). If 0, it uses the [output_need_manual file](#outputneedmanual), which can be [edited prealably by the software administrator](modifyingoutputneedmanual)
+- <a name="isoutputauto"></a>**IS_OUTPUT_AUTO** (0/1): If 1, the output_need file will be generated during run from the [planned calendar](#calendar). If 0, it uses the [output_need_manual file](#outputneedmanual), which can be [edited prealably by the software administrator](#modifyingoutputneedmanual)
 - **IS_TESTRUN** (0/1): If 1, the program runs in test environment. If 0 it runs in production environment
 
 ## Current sources<a name="currentsources"></a>
