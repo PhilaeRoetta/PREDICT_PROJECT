@@ -5,7 +5,7 @@
 - [Prediction game rules](#gamerules)
 - [Input tools and accounts](#inputtoolsaccounts)
 - [Input Parameters](#inputparameters)
-- [Current scope](#currentscope)
+- [Current sources](#currentsourced)
 - [DropBox repository tree](#dropboxtree)
 - [Files required](#filesrequired)
 - [How to add competition to scope](#addtoscope)
@@ -159,7 +159,7 @@ The software uses a set of environment variables as input, provided as GitHub se
 - **GMAIL_USER** and **GMAIL_APP_PASSWORD**, email adress and password to send [automatic email on the status of run](#emailsent)
 - **RECIPIENT_EMAIL**, comma-separated list of email adress for recipient of the [email automatically sent on the status of run](#emailsent)
 
-Moreover, considering the [current scope](#currentscope), stored as GitHub actions:
+Moreover, considering the [current sources](#currentsources), stored as GitHub actions:
 - **LNB_URL** : the LNB website url
 - **BI_URL**, the BI forum website, BI_USERNAME and BI_PASSWORD to log to BI acccount and post results
 
@@ -167,7 +167,7 @@ Considering the context of run:
 - <a name="isoutputauto"></a>**IS_OUTPUT_AUTO** (0/1): If 1, the output_need file will be generated during run from the [planned calendar](#calendar). If 0, it uses the [output_need_manual file](#outputneedmanual), which can be [edited prealably by the software administrator](modifyingoutputneedmanual)
 - **IS_TESTRUN** (0/1): If 1, the program runs in test environment. If 0 it runs in production environment
 
-## Current scope<a name="currentscope"></a>
+## Current sources<a name="currentspurces"></a>
 The software currently processes seasons from one source named "LNB" (French Elite basketball).  
 These LNB seasons are handled through the module *get_game_details_lnb.py*, which retrieves game schedules, results, and competition metadata.
 
