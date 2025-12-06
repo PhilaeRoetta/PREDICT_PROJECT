@@ -5,7 +5,7 @@
 - [Prediction game rules](#gamerules)
 - [Input tools and accounts](#inputtoolsaccounts)
 - [Input Parameters](#inputparameters)
-- [Current sources](#currentsourced)
+- [Current sources](#currentsources)
 - [DropBox repository tree](#dropboxtree)
 - [Files required](#filesrequired)
 - [How to add competition to scope](#addtoscope)
@@ -167,7 +167,7 @@ Considering the context of run:
 - <a name="isoutputauto"></a>**IS_OUTPUT_AUTO** (0/1): If 1, the output_need file will be generated during run from the [planned calendar](#calendar). If 0, it uses the [output_need_manual file](#outputneedmanual), which can be [edited prealably by the software administrator](modifyingoutputneedmanual)
 - **IS_TESTRUN** (0/1): If 1, the program runs in test environment. If 0 it runs in production environment
 
-## Current sources<a name="currentspurces"></a>
+## Current sources<a name="currentsources"></a>
 The software currently processes seasons from one source named "LNB" (French Elite basketball).  
 These LNB seasons are handled through the module *get_game_details_lnb.py*, which retrieves game schedules, results, and competition metadata.
 
