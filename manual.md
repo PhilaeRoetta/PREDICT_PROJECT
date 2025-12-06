@@ -159,7 +159,7 @@ The software uses a set of environment variables as input, provided as GitHub se
 - **GMAIL_USER** and **GMAIL_APP_PASSWORD**, email adress and password to send [automatic email on the status of run](#emailsent)
 - **RECIPIENT_EMAIL**, comma-separated list of email adress for recipient of the [email automatically sent on the status of run](#emailsent)
 
-Moreover, considering the [current sources](#currentsources), stored as GitHub actions:
+Moreover, considering the [current sources](#currentsources), stored as GitHub secrets, or before run for local running:
 - **LNB_URL** : the LNB website url
 - **BI_URL**, the BI forum website, BI_USERNAME and BI_PASSWORD to log to BI acccount and post results
 
