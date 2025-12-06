@@ -151,7 +151,7 @@ See *README.md* section for more details.
 
 ## Input Parameters<a name="inputparameters"></a>
 
-The software uses a set of environment variables as input, provided as GitHub secrets:
+The software uses a set of environment variables as input, provided as GitHub secrets, or before run for local running:
 - **SNOWFLAKE_USERNAME** and **SNOWFLAKE_PASSWORD** to log in Snowflake account
 - **RCLONE_CONFIG_BASE64**, Base64‑encoded rclone configuration used to authenticate to the Dropbox account.
 - **IMGBB_API_KEY**, API key to log to imgbb account
