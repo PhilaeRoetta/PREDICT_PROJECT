@@ -249,6 +249,7 @@ Example of each file is copied under *file_exemples/* folder
 - <a name="playoffstable"></a>**playoffs_table.txt**: 
     Contains Python arrays representing playoff bracket positions.  
     Used to generate the graphical playoff image posted on forums.
+    (See [generate playoffs](#generateplayoffs) for details.)
     
 ### Manual files required (either in global_manual_inputs - if used both in Prod and Test-  or local_manual_inputs):
 They must be created and updated by the software administrator, according to the scope or evolutions.
