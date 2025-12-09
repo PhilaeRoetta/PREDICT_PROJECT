@@ -379,7 +379,7 @@ When creating it must store the value "NONE". The calendar and its value will be
 
 ## How to add competition to the scope<a name="addtoscope"></a>
 
-The software administrator can add to the scope any sport season they want, for which games cannot end with a tie score; and link it to any forum they want, in any language:
+The software administrator can add to the scope any competion from any sport league they want, as long as games cannot end with a tie score; and link it to any forum they want, in any language:
 - To prepare a new competition
 
     If the competition is on a new source, the software administrator must:
