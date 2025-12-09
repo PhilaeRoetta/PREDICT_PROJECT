@@ -391,7 +391,8 @@ The software administrator can add to the scope any competion from any sport lea
     - add the season to [the input required manual file season.csv](#season)
 
     Finally the software administrator must:  
-    - add the new competition to [the input required manual file competition.csv](#competition) with IS_TO_LOAD = 1 and possibly modify other required manual files
+    - add the new competition to [the input required manual file competition.csv](#competition) with IS_TO_LOAD = 1 
+    - possibly modify other [required files](#filesrequired) according to modification the software administrator wants to apply to sources
 
 - To link the competition with new topics
 
