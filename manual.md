@@ -368,7 +368,7 @@ The following files are downloaded, modified by the program then uploaded back t
     - **OUTPUT_AUTO**: Will store the value of the parameter [IS_OUTPUT_AUTO](#isoutputauto)
     - **PLANNED_RUN_TIME_UTC**: Will store the utc run time [planned in the calendar](#calendar), if ran automatically
 
-- <a name="taskdone"></a>task_done.csv, in *current/outputs/python*: Tracks tasks already ran. The program will compare it with the [planned calendar](#calendar) to know what remains to be run.
+- <a name="taskdone"></a>task_done.csv, in *current/outputs/python*: Tracks tasks already ran. The program will compare it with the [planned calendar](#calendar) to know what remains to be run, and when.
     - **TASK_RUN**: The [type of the task](#taskrun)
     - **SEASON_ID**: The id of the season - same as on [season.csv](#season)/SEASON_ID	
     - **GAMEDAY**: The gameday name	
