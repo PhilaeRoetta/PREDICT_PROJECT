@@ -417,10 +417,10 @@ The software can be run manually by the software administrator, using an [output
 But the software is also ran automatically, every 12 minutes, by GitHub using GitHub Actions, the file ouput_need being generated automatically. 
 The automatic run of the software relies on the calendar management, to know what to run, and when.
 
-During the [main run](#mainrun) or ["Init compet" run](#initcompet), DBT performs DML operations on database.  
-For each gameday of the season, the begin datetime of the first game, and the begin datetime of the last game is calculated.  
+During the [main run](#mainrun) or ["Init compet" run](#initcompet), DBT performs DML operations on database:  
 
-Considering it, the view *VW_CALENDAR* (see the file *vw_calendar.sql* for more details) enables the program to know when to perform tasks for the gameday (for more details of the definition of tasks see [here](#taskrun))
+For each gameday of the season, the begin datetime of the first game, and the begin datetime of the last game is calculated.  
+Considering it, the view *VW_CALENDAR* (see the file *vw_calendar.sql* for more details) enables the program to know when to perform tasks for the gameday (for more details of the definition of tasks see [here](#taskrun)). 
 - TASK_RUN = 'UPDATEGAMES': planned several times before the first game of the gameday to detect possible changes of date and times of games in the predicted league
 - TASK_RUN = 'INIT': planned at the beginning of the first game of the previous gameday - it will post the prediction template for the new gameday
 - TASK_RUN = 'CHECK': planned at the beginning of each game, to read the latest predictions from players
