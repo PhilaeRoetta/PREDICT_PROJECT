@@ -415,7 +415,7 @@ The software administrator can add to the scope any competion from any sport lea
 
 The software can be run manually by the software administrator, using an [output_need_manual file](#outputneedmanual) that they prealably [modified](#modifyingoutputneedmanual).  
 But the software is also ran automatically, every 12 minutes, by GitHub using GitHub Actions, the file ouput_need being generated automatically. 
-The automatic run of the software relies on the calendar management, to know what to run.
+The automatic run of the software relies on the calendar management, to know what to run, and when.
 
 During the [main run](#mainrun) or ["Init compet" run](#initcompet), DBT performs DML operations on database.  
 For each gameday of the season, the begin datetime of the first game, and the begin datetime of the last game is calculated.  
