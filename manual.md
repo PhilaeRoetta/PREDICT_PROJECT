@@ -426,9 +426,10 @@ Considering them, the view *VW_CALENDAR* (see the file *vw_calendar.sql* for mor
 - TASK_RUN = 'CHECK': planned at the beginning of each game, to read the latest games predictions from players
 - TASK_RUN = 'CALCULATE': planned two hours after the beginning of last game of the gameday, to perform and post calculations. If the last game is not finished yet, the extraction will return an error (see the module *get_game_details_lnb.py*), and wait for the next automatic run to retry again.
 
-After updating the database without errors, the software will insert the ran task into [task_done.csv file](#taskdone), then compare the calendar of run to it, to get what utc time will be run next, and insert it into [next_run_time_utc.txt](nextruntimeutc).
+After updating the database without errors, the software will insert the ran task into [task_done.csv file](#taskdone).  
+It will then compare the calendar of run to it, to get what utc time will be run next, and insert it into [next_run_time_utc.txt](#nextruntimeutc).
     
-Next automatic run by GitHub actions, at the very beginning of the run, the software will check if current utc time greater than the time from [next_run_time_utc.txt](nextruntimeutc).  
+Next automatic run by GitHub actions, at the very beginning of the run, the software will check if current utc time greater than the time from [#next_run_time_utc.txt](nextruntimeutc).  
 If it is not, it stops running, and [no email is sent](#emailsent). 
 Else it continues, generating output_need related to the task from the calendar and downstreams. 
 
