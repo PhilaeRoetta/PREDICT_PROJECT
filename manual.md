@@ -420,11 +420,11 @@ The automatic run of the software relies on the calendar management, to know wha
 During the [main run](#mainrun) or ["Init compet" run](#initcompet), DBT performs DML operations on database:  
 
 For each gameday of the season, the begin datetime of the first game, and the begin datetime of the last game is calculated.  
-Considering it, the view *VW_CALENDAR* (see the file *vw_calendar.sql* for more details) enables the program to know when to perform tasks for the gameday (for more details of the definition of tasks see [here](#taskrun)). 
-- TASK_RUN = 'UPDATEGAMES': planned several times before the begin datetime of the first game of the gameday to detect possible changes of date and times of games in the predicted league
+Considering them, the view *VW_CALENDAR* (see the file *vw_calendar.sql* for more details) enables the program to know when to perform tasks for each gameday (for more details of the definition of tasks see [here](#taskrun)). 
+- TASK_RUN = 'UPDATEGAMES': planned several times before the begin datetime of the first game of the gameday to detect possible changes of date and times of games
 - TASK_RUN = 'INIT': planned at the beginning of the first game of the previous gameday - it will post the prediction template for the new gameday
-- TASK_RUN = 'CHECK': planned at the beginning of each game, to read the latest predictions from players
-- TASK_RUN = 'CALCULATE': planned two hours after the beginning of last game of the gameday, to perform and post calculations. If the last game is not finished, the extraction will return an error (see the module *get_game_details_lnb.py*), and wait for the next automatic run to retry again.
+- TASK_RUN = 'CHECK': planned at the beginning of each game, to read the latest games predictions from players
+- TASK_RUN = 'CALCULATE': planned two hours after the beginning of last game of the gameday, to perform and post calculations. If the last game is not finished yet, the extraction will return an error (see the module *get_game_details_lnb.py*), and wait for the next automatic run to retry again.
 
 After updating the database without errors, the software will insert the ran task into [task_done.csv file](#taskdone), then compare the calendar of run to it, to get what utc time will be run next, and insert it into [next_run_time_utc.txt](nextruntimeutc).
     
