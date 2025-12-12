@@ -479,7 +479,7 @@ The playoffs competition must exist in the database through the file [competitio
 
 ## Modifying output_need_manual file<a name="modifyingoutputneedmanual"></a>
 
-The program runs tasks automatically based on [the planned calendar](#calendar). It can be overwrite by running a specific task with [the input file output_need_manual](#outputneed). Following is presented the different tasks processed by the software:
+The program runs tasks automatically based on [the planned calendar](#calendar). It can be overwrite by running a specific task with [the input file output_need_manual](#outputneedmanual). Following is presented the different tasks processed by the software:
 
 - <a name="gameaction"></a>GAME_ACTION
     - 'RUN': Will get games from the source with the specified GAMEDAY and update the database with details (date, time, results)
