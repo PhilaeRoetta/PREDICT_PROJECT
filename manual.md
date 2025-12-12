@@ -496,7 +496,7 @@ The program runs tasks automatically based on [the planned calendar](#calendar).
 
 - <a name="taskrun"></a>TASK_RUN
     - 'INIT': Will initiate the defined GAMEDAY by posting the template of predictions on the forum
-    - 'UPDATEGAMES': if combined with GAME_ACTION = 'RUN', will update details about games in the database, looking for possible change in date and time
+    - 'UPDATEGAMES': if combined with GAME_ACTION = 'RUN', will update details about games about the specified GAMEDAY in the database, looking for possible change in date and time
     - 'CHECK': if associated with MESSAGE_ACTION = 'CHECK', retreives messages for the software administrator validation
     - 'CALCULATE': Post GAMEDAY results message
 
